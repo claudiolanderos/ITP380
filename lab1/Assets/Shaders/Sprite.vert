@@ -2,6 +2,7 @@
 // Vertex shader for sprite rendering
 
 #version 150
+#extension GL_ARB_explicit_attrib_location : require
 
 layout (std140) uniform MatrixBlock
 { 
@@ -9,9 +10,9 @@ layout (std140) uniform MatrixBlock
 	mat4 uWorldTransform;
 };
 
-in vec3 inPosition;
-in vec3 inNormal;
-in vec2 inTexCoord;
+layout(location = 0) in vec3 inPosition;
+layout(location = 1) in vec3 inNormal;
+layout(location = 2) in vec2 inTexCoord;
 
 out vec3 outNormal;
 out vec2 outTexCoord;
@@ -22,7 +23,7 @@ void main()
 	outTexCoord = inTexCoord;
 	
 	// Transform into world space
-	vec4 newPos = uWorldTransform * vec4(inPosition, 1.0f);
+	vec4 newPos = uWorldTransform * vec4(inPosition, 1.0);
 	// Now into projection space
 	newPos = uViewProj * newPos;
     gl_Position = newPos;

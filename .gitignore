@@ -186,15 +186,15 @@ FakesAssemblies/
 DerivedData/
 
 # Unreal stuff
-pa5/Binaries/
-pa5/Intermediate/
-pa5/DerivedCache/
-pa5/Saved/
+lab5/Binaries/
+lab5/Intermediate/
+lab5/DerivedCache/
+lab5/Saved/
 
 # User-specific files
-pa5/*.suo
-pa5/*.user
-pa5/*.sln.docstates
-pa5/*.sln
-pa5/*.sdf
-pa5/*.opensdf
+lab5/*.suo
+lab5/*.user
+lab5/*.sln.docstates
+lab5/*.sln
+lab5/*.sdf
+lab5/*.opensdf

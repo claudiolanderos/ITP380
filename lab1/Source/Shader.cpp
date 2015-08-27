@@ -168,16 +168,17 @@ bool Shader::IsValidProgram()
 		return false;
 	}
 
-	glGetProgramiv(mShaderProgram, GL_VALIDATE_STATUS, &status);
-	if (status != GL_TRUE)
-	{
-		glGetProgramInfoLog(mShaderProgram, 512, nullptr, buffer);
-		SDL_Log("GLSL Validate Status:\n%s", buffer);
-		// If this is just a warning, don't die
-		if (buffer[0] != 'W')
-		{
-			return false;
-		}
-	}
+//	glValidateProgram(mShaderProgram);
+//	glGetProgramiv(mShaderProgram, GL_VALIDATE_STATUS, &status);
+//	if (status != GL_TRUE)
+//	{
+//		glGetProgramInfoLog(mShaderProgram, 512, nullptr, buffer);
+//		SDL_Log("GLSL Validate Status:\n%s", buffer);
+//		// If this is just a warning, don't die
+//		if (buffer[0] != 'W')
+//		{
+//			return false;
+//		}
+//	}
 	return true;
 }
