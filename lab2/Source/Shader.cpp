@@ -35,15 +35,20 @@ void Shader::BindWorldTransform(const Matrix4& worldTransform)
 
 void Shader::UploadUniformsToGPU()
 {
-	// Bind this buffer to index 0
-	glBindBuffer(GL_UNIFORM_BUFFER, mUniformBuffer);
-	glBindBufferBase(GL_UNIFORM_BUFFER, 0, mUniformBuffer);
-	
-	// Copy uniform buffer data
-	GLvoid* p = glMapBufferRange(GL_UNIFORM_BUFFER, 0, sizeof(mMatrixBlock),
-					 GL_MAP_INVALIDATE_BUFFER_BIT|GL_MAP_WRITE_BIT);
-	memcpy(p, &mMatrixBlock, sizeof(mMatrixBlock));
-	glUnmapBuffer(GL_UNIFORM_BUFFER);
+	//// Bind this buffer to index 0
+	//glBindBuffer(GL_UNIFORM_BUFFER, mUniformBuffer);
+	//glBindBufferBase(GL_UNIFORM_BUFFER, 0, mUniformBuffer);
+	//
+	//// Copy uniform buffer data
+	//GLvoid* p = glMapBufferRange(GL_UNIFORM_BUFFER, 0, sizeof(mMatrixBlock),
+	//				 GL_MAP_INVALIDATE_BUFFER_BIT|GL_MAP_WRITE_BIT);
+	//memcpy(p, &mMatrixBlock, sizeof(mMatrixBlock));
+	//glUnmapBuffer(GL_UNIFORM_BUFFER);
+
+	GLuint view = glGetUniformLocation(mShaderProgram, "uViewProj");
+	glUniformMatrix4fv(view, 1, GL_FALSE, mMatrixBlock.mViewProj.GetAsFloatPtr());
+	GLuint world = glGetUniformLocation(mShaderProgram, "uWorldTransform");
+	glUniformMatrix4fv(world, 1, GL_FALSE, mMatrixBlock.mWorldTransform.GetAsFloatPtr());
 }
 
 void Shader::BindTexture(const char* param, TexturePtr texture, int unit)
@@ -124,15 +129,15 @@ bool Shader::Load(const char* fileName, class AssetCache* cache)
 
 	SetActive();
 
-	// Now setup the uniform buffer object
-	glGenBuffers(1, &mUniformBuffer);
-	glBindBuffer(GL_UNIFORM_BUFFER, mUniformBuffer);
-	glBufferData(GL_UNIFORM_BUFFER, sizeof(mMatrixBlock), &mMatrixBlock, GL_DYNAMIC_DRAW);
+	//// Now setup the uniform buffer object
+	//glGenBuffers(1, &mUniformBuffer);
+	//glBindBuffer(GL_UNIFORM_BUFFER, mUniformBuffer);
+	//glBufferData(GL_UNIFORM_BUFFER, sizeof(mMatrixBlock), &mMatrixBlock, GL_DYNAMIC_DRAW);
 
-	// Bind it to the program
-	GLuint block = glGetUniformBlockIndex(mShaderProgram, "MatrixBlock");
-	glUniformBlockBinding(mShaderProgram, block, 0);
-	glBindBufferBase(GL_UNIFORM_BUFFER, 0, mUniformBuffer);
+	//// Bind it to the program
+	//GLuint block = glGetUniformBlockIndex(mShaderProgram, "MatrixBlock");
+	//glUniformBlockBinding(mShaderProgram, block, 0);
+	//glBindBufferBase(GL_UNIFORM_BUFFER, 0, mUniformBuffer);
 
 	return true;
 }

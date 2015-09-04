@@ -4,11 +4,8 @@
 #version 150
 #extension GL_ARB_explicit_attrib_location : require
 
-layout (std140) uniform MatrixBlock
-{ 
-	mat4 uViewProj;
-	mat4 uWorldTransform;
-};
+uniform mat4 uViewProj;
+uniform mat4 uWorldTransform;
 
 layout(location = 0) in vec3 inPosition;
 layout(location = 1) in vec3 inNormal;
