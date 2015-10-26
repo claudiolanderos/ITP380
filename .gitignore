@@ -187,6 +187,7 @@ DerivedData/
 
 # Unreal stuff
 lab5/Binaries/
+lab5/Build/
 lab5/Intermediate/
 lab5/DerivedCache/
 lab5/Saved/
