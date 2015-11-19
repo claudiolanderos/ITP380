@@ -19,7 +19,7 @@ void CollisionComponent::Register()
 
 void CollisionComponent::Unregister()
 {
-	Super::Register();
+	Super::Unregister();
 	mOwner.GetGame().GetPhysWorld().RemoveComponent(ThisPtr());
 }
 
