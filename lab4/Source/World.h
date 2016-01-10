@@ -5,7 +5,7 @@
 
 #pragma once
 #include <memory>
-#include <unordered_set>
+#include <vector>
 #include "Actor.h"
 
 class World
@@ -20,5 +20,5 @@ public:
 	
 	void RemoveAllActors();
 private:
-	std::unordered_set<ActorPtr> mActors;
+	std::vector<ActorPtr> mActors;
 };

@@ -12,7 +12,7 @@ World::~World()
 
 void World::AddActor(ActorPtr actor)
 {
-	mActors.emplace(actor);
+	mActors.emplace_back(actor);
 }
 
 void World::Tick(float deltaTime)
