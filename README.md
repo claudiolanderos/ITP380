@@ -4,3 +4,5 @@
 Name: Tommy Trojan
 
 Email: ttrojan@usc.edu
+
+Platform (PC or Mac):
