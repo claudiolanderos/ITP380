@@ -92,19 +92,12 @@ std::shared_ptr<Other> Cast(std::shared_ptr<This> ptr)
 	}
 }
 
-// Casts ref to Type if valid
+// Casts ref to Type. Does not perform an IsA check first.
 // Usage: Cast<Type>(ref)
 template <typename Other, typename This>
-const Other& Cast(const This& ref)
+Other& Cast(This& ref)
 {
-	if (IsA<Other>(ref))
-	{
-		return static_cast<const Other&>(ref);
-	}
-	else
-	{
-		return nullptr;
-	}
+	return static_cast<Other&>(ref);
 }
 
 #include "ObjectMacros.h"
