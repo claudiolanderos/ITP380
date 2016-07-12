@@ -43,7 +43,7 @@ bool Texture::Load(const char* fileName, class AssetCache* cache)
 	// Generate a GL texture
 	glGenTextures(1, &mTextureID);
 	glBindTexture(GL_TEXTURE_2D, mTextureID);
-	glTexImage2D(GL_TEXTURE_2D, 0, mode, mWidth, mWidth, 0, mode,
+	glTexImage2D(GL_TEXTURE_2D, 0, mode, mWidth, mHeight, 0, mode,
 		GL_UNSIGNED_BYTE, image);
 
 	// Use linear filtering

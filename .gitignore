@@ -200,3 +200,4 @@ lab5/*.sln.docstates
 lab5/*.sln
 lab5/*.sdf
 lab5/*.opensdf
+*.db
