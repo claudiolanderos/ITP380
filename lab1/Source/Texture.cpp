@@ -46,6 +46,8 @@ bool Texture::Load(const char* fileName, class AssetCache* cache)
 	glTexImage2D(GL_TEXTURE_2D, 0, mode, mWidth, mHeight, 0, mode,
 		GL_UNSIGNED_BYTE, image);
 
+	SOIL_free_image_data(image);
+
 	// Use linear filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
