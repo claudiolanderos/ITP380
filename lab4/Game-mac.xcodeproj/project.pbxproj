@@ -276,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -d \"$BUILD_DIR/Debug\" ]; then\n    cp $SRCROOT/../external/GLEW/lib/mac/*.dylib $BUILD_DIR/Debug\n    cp $SRCROOT/../external/SDL/lib/mac/*.dylib $BUILD_DIR/Debug\nfi\n                                     \nif [ -d \"$BUILD_DIR/Release\" ]; then\n    cp $SRCROOT/../external/GLEW/lib/mac/*.dylib $BUILD_DIR/Release\n    cp $SRCROOT/../external/SDL/lib/mac/*.dylib $BUILD_DIR/Release\nfi";
+			shellScript = "if [ -d \"$BUILD_DIR/Debug\" ]; then\n    cp \"$SRCROOT\"/../external/GLEW/lib/mac/*.dylib $BUILD_DIR/Debug\n    cp \"$SRCROOT\"/../external/SDL/lib/mac/*.dylib $BUILD_DIR/Debug\nfi\n                                     \nif [ -d \"$BUILD_DIR/Release\" ]; then\n    cp \"$SRCROOT\"/../external/GLEW/lib/mac/*.dylib $BUILD_DIR/Release\n    cp \"$SRCROOT\"/../external/SDL/lib/mac/*.dylib $BUILD_DIR/Release\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
