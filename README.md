@@ -1,8 +1,8 @@
 # ITP 380 Labs - Fall 2016 #
 
 ### PUT YOUR INFO HERE ###
-Name: Tommy Trojan
+Name: Claudio Landeros
 
-Email: ttrojan@usc.edu
+Email: clandero@usc.edu
 
-Platform (PC or Mac):
+Platform (PC or Mac): Mac
