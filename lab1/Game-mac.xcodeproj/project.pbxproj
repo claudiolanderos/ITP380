@@ -30,6 +30,9 @@
 		92E46E911B634FCA0035CD21 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E791B634FCA0035CD21 /* VertexArray.cpp */; };
 		92E46E921B634FCA0035CD21 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E7A1B634FCA0035CD21 /* World.cpp */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		B4838B191D7B9B2D00C2F8B9 /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4838B171D7B9B2D00C2F8B9 /* Asteroid.cpp */; };
+		B4838B1B1D7BB42E00C2F8B9 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4838B1A1D7BB42E00C2F8B9 /* Ship.cpp */; };
+		B4838B1F1D7BD11200C2F8B9 /* Laser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4838B1D1D7BD11200C2F8B9 /* Laser.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,12 @@
 		92E46E791B634FCA0035CD21 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		92E46E7A1B634FCA0035CD21 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B4838B171D7B9B2D00C2F8B9 /* Asteroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asteroid.cpp; sourceTree = "<group>"; };
+		B4838B181D7B9B2D00C2F8B9 /* Asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
+		B4838B1A1D7BB42E00C2F8B9 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		B4838B1C1D7BB44A00C2F8B9 /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		B4838B1D1D7BD11200C2F8B9 /* Laser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Laser.cpp; sourceTree = "<group>"; };
+		B4838B1E1D7BD11200C2F8B9 /* Laser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Laser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +187,12 @@
 				92E46E781B634FCA0035CD21 /* Texture.cpp */,
 				92E46E791B634FCA0035CD21 /* VertexArray.cpp */,
 				92E46E7A1B634FCA0035CD21 /* World.cpp */,
+				B4838B171D7B9B2D00C2F8B9 /* Asteroid.cpp */,
+				B4838B181D7B9B2D00C2F8B9 /* Asteroid.h */,
+				B4838B1A1D7BB42E00C2F8B9 /* Ship.cpp */,
+				B4838B1C1D7BB44A00C2F8B9 /* Ship.h */,
+				B4838B1D1D7BD11200C2F8B9 /* Laser.cpp */,
+				B4838B1E1D7BD11200C2F8B9 /* Laser.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -263,15 +278,18 @@
 				92E46E891B634FCA0035CD21 /* PhysWorld.cpp in Sources */,
 				92E46E881B634FCA0035CD21 /* Object.cpp in Sources */,
 				92E46E861B634FCA0035CD21 /* Math.cpp in Sources */,
+				B4838B1F1D7BD11200C2F8B9 /* Laser.cpp in Sources */,
 				92E46E8B1B634FCA0035CD21 /* Renderer.cpp in Sources */,
 				92E46E811B634FCA0035CD21 /* DrawComponent.cpp in Sources */,
 				92E46E821B634FCA0035CD21 /* FrameTimer.cpp in Sources */,
 				92E46E8C1B634FCA0035CD21 /* Shader.cpp in Sources */,
 				92E46E7F1B634FCA0035CD21 /* CollisionComponent.cpp in Sources */,
 				92E46E851B634FCA0035CD21 /* Main.cpp in Sources */,
+				B4838B1B1D7BB42E00C2F8B9 /* Ship.cpp in Sources */,
 				92E46E7C1B634FCA0035CD21 /* Asset.cpp in Sources */,
 				92E46E8A1B634FCA0035CD21 /* Random.cpp in Sources */,
 				92E46E8F1B634FCA0035CD21 /* SpriteComponent.cpp in Sources */,
+				B4838B191D7B9B2D00C2F8B9 /* Asteroid.cpp in Sources */,
 				92E46E7D1B634FCA0035CD21 /* AssetCache.cpp in Sources */,
 				92E46E7B1B634FCA0035CD21 /* Actor.cpp in Sources */,
 				92E46E901B634FCA0035CD21 /* Texture.cpp in Sources */,

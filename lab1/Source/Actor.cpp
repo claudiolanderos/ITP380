@@ -98,11 +98,41 @@ Vector3 Actor::GetForward() const
 void Actor::ComputeWorldTransform()
 {
 	// TODO
+    Matrix4 scaleMat = Matrix4::CreateScale(this->GetScale());
+    Matrix4 rotationMat = Matrix4::CreateRotationZ(this->GetRotation());
+    Matrix4 translationMat = Matrix4::CreateTranslation(this->GetPosition());
+    mWorldTransform = scaleMat*rotationMat*translationMat;
+    
+    // No parent is the base case
+    if (mParent)
+    {
+        // My transform * Parent's transform
+        mWorldTransform *= mParent->GetWorldTransform();
+    }
+    // Tell my children to recompute their transforms
+    for (auto& child : mChildren)
+    {
+        child->ComputeWorldTransform();
+    }
 }
 
 void Actor::TickInternal(float deltaTime)
 {
 	// TODO
+    for(ComponentPtr component : mPreTickComponents){
+        component->Tick(deltaTime);
+    }
+    
+    Tick(deltaTime);
+    
+    for(ComponentPtr component : mPostTickComponents){
+        component->Tick(deltaTime);
+    }
+    
+    for(ActorPtr actor : mChildren){
+        actor->TickInternal(deltaTime);
+    }
+    
 }
 
 void Actor::RemoveAllComponents()

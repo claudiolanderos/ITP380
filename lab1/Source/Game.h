@@ -8,6 +8,7 @@
 #include "World.h"
 #include "AssetCache.h"
 #include "PhysWorld.h"
+#include "Ship.h"
 
 class Game
 {
@@ -39,4 +40,6 @@ private:
 	PhysWorld mPhysWorld;
 
 	bool mShouldQuit;
+    
+    ShipPtr mShipPtr;
 };
