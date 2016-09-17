@@ -14,28 +14,30 @@
 #include "Sound.h"
 #include "SphereCollision.h"
 #include "Asteroid.h"
+#include "MeshComponent.h"
+#include "Mesh.h"
 
 IMPL_ACTOR(Ship, Actor);
 
 Ship::Ship(Game& game)
     :Actor(game)
 {
-    mSpriteComponentPtr = SpriteComponent::Create(*this);
-    mNoThrusterTexture = game.GetAssetCache().Load<Texture>("Textures/Spaceship.png");
-    mThrusterTexture = game.GetAssetCache().Load<Texture>("Textures/SpaceshipWithThrust.png");
-    mSpriteComponentPtr->SetTexture(mNoThrusterTexture);
-    
+    mMeshComponent = MeshComponent::Create(*this);
+    mMesh = game.GetAssetCache().Load<Mesh>("Meshes/PlayerShip.itpmesh2");
+    mMeshComponent->SetMesh(mMesh);
+    SetScale(0.5f);
+    SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
+
     //Load sound
     mSoundPtr = game.GetAssetCache().Load<Sound>("Sounds/Laser.wav");
     mSoundCue = mAudioComponent->PlaySound(game.GetAssetCache().Load<Sound>("Sounds/ShipEngine.wav"), true);
-    SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
     
     mInputComponent = InputComponent::Create(*this, Component::PreTick);
     mInputComponent->SetAngularSpeed(Math::TwoPi);
     mInputComponent->SetLinearSpeed(400.0f);
     
     auto coll = SphereCollision::Create(*this);
-    coll->RadiusFromTexture(mThrusterTexture);
+    coll->RadiusFromMesh(mMesh);
     coll->SetScale(0.75f);
 }
 
@@ -44,12 +46,10 @@ void Ship::Tick(float deltaTime)
     Super::Tick(deltaTime);
     if(Math::IsZero(mInputComponent->GetLinearAxis()))
     {
-        mSpriteComponentPtr->SetTexture(mNoThrusterTexture);
         mSoundCue.Pause();
     }
     else
     {
-        mSpriteComponentPtr->SetTexture(mThrusterTexture);
         mSoundCue.Resume();
     }
 }
@@ -77,7 +77,7 @@ void Ship::BeginTouch(Actor& other)
     {
         mAudioComponent->PlaySound(mGame.GetAssetCache().Load<Sound>("Sounds/ShipDie.wav"));
         this->SetIsPaused(true);
-        mSpriteComponentPtr->SetIsVisible(false);
+        mMeshComponent->SetIsVisible(false);
         TimerHandle handle;
         mGame.GetGameTimers().SetTimer(handle, this, &Ship::OnRespawnShip, 1.0f);
     }
@@ -86,7 +86,7 @@ void Ship::BeginTouch(Actor& other)
 void Ship::OnRespawnShip()
 {
     SetIsPaused(false);
-    mSpriteComponentPtr->SetIsVisible(true);
+    mMeshComponent->SetIsVisible(true);
     SetPosition(Vector3::Zero);
     SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
 }

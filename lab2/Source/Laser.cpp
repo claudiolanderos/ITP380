@@ -10,6 +10,7 @@
 #include "Game.h"
 #include "SphereCollision.h"
 #include "Asteroid.h"
+#include "SpriteComponent.h"
 
 IMPL_ACTOR(Laser, Actor);
 

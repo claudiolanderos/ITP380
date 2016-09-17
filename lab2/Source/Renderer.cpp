@@ -1,5 +1,6 @@
 #include "Renderer.h"
 #include "Game.h"
+#include "SpriteComponent.h"
 
 Renderer::Renderer(Game& game)
 	:mGame(game)

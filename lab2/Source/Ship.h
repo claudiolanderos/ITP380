@@ -32,12 +32,10 @@ public:
     void BeginTouch(Actor& other) override;
 private:
     InputComponentPtr mInputComponent;
-    TexturePtr mThrusterTexture;
-    TexturePtr mNoThrusterTexture;
     MeshComponentPtr mMeshComponent;
     AudioComponentPtr mAudioComponent;
     SoundPtr mSoundPtr;
     SoundCue mSoundCue;
-    
+    MeshPtr mMesh;
 };
 DECL_PTR(Ship);
