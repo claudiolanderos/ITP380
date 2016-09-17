@@ -24,8 +24,6 @@ Laser::Laser(Game& game)
     move->SetLinearSpeed(600.0f);
     move->SetLinearAxis(1.0f);
     
-    mLifeSpan = 1.0f;
-    
     auto coll = SphereCollision::Create(*this);
     coll->RadiusFromTexture(tex);
     coll->SetScale(0.9f);
@@ -33,11 +31,17 @@ Laser::Laser(Game& game)
 
 void Laser::Tick(float deltaTime)
 {
-    mLifeSpan -= deltaTime;
-    if(mLifeSpan <= 0.0f)
-    {
-        SetIsAlive(false);
-    }
+
+}
+
+void Laser::BeginPlay()
+{
+    TimerHandle handle;
+    mGame.GetGameTimers().SetTimer(handle, this, &Laser::OnDieTimer, 1.0f);
+}
+void Laser::OnDieTimer()
+{
+    SetIsAlive(false);
 }
 
 void Laser::BeginTouch(Actor &other)
@@ -49,6 +53,7 @@ void Laser::BeginTouch(Actor &other)
         this->SetIsAlive(false);
         other.SetIsAlive(false);
         
+        mAudioComponent->PlaySound(mGame.GetAssetCache().Load<Sound>("Sounds/AsteroidDie.wav"));
         if(other.GetScale() == 0.75f)
         {
             for(int i = 0; i < 4; i++)

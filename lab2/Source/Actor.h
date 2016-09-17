@@ -60,6 +60,9 @@ public:
 
 	void SetIsAlive(bool isAlive) { mIsAlive = isAlive; }
 	bool IsAlive() const { return mIsAlive; }
+    
+    bool IsPaused() const { return mIsPaused; }
+    void SetIsPaused(bool isPaused) { mIsPaused = isPaused; }
 protected:
 	// Recomputes the world transform based on this Actor's position/scale/rotation,
 	// as well as any parent Actors
@@ -79,7 +82,7 @@ private:
 	Vector3 mPosition;
 	float mScale;
 	float mRotation;
-
+    bool mIsPaused;
 	bool mIsAlive;
 private:
 	void TickInternal(float deltaTime);
