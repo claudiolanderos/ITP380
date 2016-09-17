@@ -8,7 +8,7 @@
 
 #pragma once
 #include "Actor.h"
-#include "Texture.h"
+#include "Mesh.h"
 
 class Asteroid : public Actor
 {
@@ -16,6 +16,6 @@ class Asteroid : public Actor
 public:
     Asteroid(Game& game);
 private:
-    TexturePtr tex;
+    MeshPtr mesh;
 };
 DECL_PTR(Asteroid);

@@ -10,6 +10,8 @@
 #include "Renderer.h"
 #include "Actor.h"
 
+IMPL_COMPONENT(MeshComponent, DrawComponent);
+
 MeshComponent::MeshComponent(Actor& owner)
     : DrawComponent(owner)
 {

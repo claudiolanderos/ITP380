@@ -8,7 +8,7 @@
 
 #include "Asteroid.h"
 #include "Game.h"
-#include "SpriteComponent.h"
+#include "MeshComponent.h"
 #include "Random.h"
 #include "MoveComponent.h"
 #include "SphereCollision.h"
@@ -18,9 +18,9 @@ IMPL_ACTOR(Asteroid, Actor);
 Asteroid::Asteroid(Game& game)
     :Actor(game)
 {
-    auto sprite = SpriteComponent::Create(*this);
-    tex = game.GetAssetCache().Load<Texture>("Textures/Asteroid.png");
-    sprite->SetTexture(tex);
+    auto sprite = MeshComponent::Create(*this);
+    mesh = game.GetAssetCache().Load<Mesh>("Meshes/AsteroidMesh.itpmesh2");
+    sprite->SetMesh(mesh);
     SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
     
     auto move = MoveComponent::Create(*this, Component::PreTick);
@@ -28,6 +28,6 @@ Asteroid::Asteroid(Game& game)
     move->SetLinearAxis(1.0f);
     
     auto coll = SphereCollision::Create(*this);
-    coll->RadiusFromTexture(tex);
+    coll->RadiusFromMesh(mesh);
     coll->SetScale(0.9f);
 }
