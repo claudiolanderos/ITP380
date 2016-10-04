@@ -8,6 +8,7 @@
 
 #include "CannonTower.h"
 #include "Game.h"
+#include "CannonBall.h"
 
 IMPL_ACTOR(CannonTower, Tower);
 
@@ -40,7 +41,9 @@ void CannonTower::Fire()
             angle *= -1;
         }
         angle = Math::Cos(angle);
-
+        auto ball = CannonBall::Spawn(mGame);
+        ball->SetPosition(this->GetWorldTransform().GetTranslation());
         mChild->SetRotation(angle);
+        ball->SetRotation(this->GetRotation());
     }
 }

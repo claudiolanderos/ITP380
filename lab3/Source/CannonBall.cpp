@@ -20,7 +20,7 @@ CannonBall::CannonBall(Game& game)
     
     mMoveComponent = MoveComponent::Create(*this, Component::PreTick);
     mMoveComponent->SetLinearSpeed(300.0f);
-    
+
     mSphereCollision = SphereCollision::Create(*this);
     mSphereCollision->RadiusFromMesh(mMesh);
 }
