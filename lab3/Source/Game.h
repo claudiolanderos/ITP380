@@ -8,6 +8,9 @@
 #include "World.h"
 #include "AssetCache.h"
 #include "PhysWorld.h"
+#include "InputManager.h"
+#include "GameTimers.h"
+#include "GameMode.h"
 
 class Game
 {
@@ -22,6 +25,10 @@ public:
 	World& GetWorld() { return mWorld; }
 	AssetCache& GetAssetCache() { return mAssetCache; }
 	PhysWorld& GetPhysWorld() { return mPhysWorld; }
+    InputManager& GetInput() { return mInput; }
+    GameTimerManager& GetGameTimers() { return mGameTimerManager; }
+    GameModePtr GetGameMode() { return mGameMode; }
+    
 private:
 	void StartGame();
 	
@@ -31,12 +38,18 @@ private:
 
 	void Tick();
 	void GenerateOutput();
+    
+    void AddInputMappings();
 
 	Renderer mRenderer;
 	FrameTimer mTimer;
 	World mWorld;
 	AssetCache mAssetCache;
 	PhysWorld mPhysWorld;
-
+    GameModePtr mGameMode;
 	bool mShouldQuit;
+        
+    InputManager mInput;
+    
+    GameTimerManager mGameTimerManager;
 };

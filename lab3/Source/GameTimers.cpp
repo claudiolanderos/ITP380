@@ -9,7 +9,46 @@ GameTimerManager::GameTimerManager()
 
 void GameTimerManager::Tick(float deltaTime)
 {
-	// TODO
+    mAreTimersTicking = true;
+    
+    for(auto& iter : mActiveTimers)
+    {
+        if(iter.second.mStatus == Active)
+        {
+            iter.second.mRemainingTime -= deltaTime;
+            if(iter.second.mRemainingTime <= 0.0f)
+            {
+                iter.second.mDelegate->Execute();
+                if(iter.second.mIsLooping == true)
+                {
+                    iter.second.mRemainingTime = iter.second.mDuration;
+                }
+                else {
+                    iter.second.mStatus = Cleared;
+                    mClearedTimers.push_back(iter.second.mHandle);
+                }
+            }
+        }
+    }
+    
+    for(auto& iter : mClearedTimers)
+    {
+        auto handle =  mActiveTimers.find(iter);
+        RemoveFromObjMap(handle->second.mObj, handle->second.mHandle);
+    }
+    mClearedTimers.clear();
+    
+    for(auto& iter : mPendingTimers)
+    {
+        if(iter.second.mStatus != Paused)
+        {
+            iter.second.mStatus = Active;
+        }
+        mActiveTimers.insert(iter);
+    }
+    mPendingTimers.clear();
+    
+    mAreTimersTicking = false;
 }
 
 void GameTimerManager::ClearTimer(const TimerHandle& handle)
@@ -124,7 +163,28 @@ void GameTimerManager::ClearAllTimers(Object* obj)
 
 void GameTimerManager::SetTimerInternal(TimerHandle& outHandle, Object* obj, TimerDelegatePtr delegate, float duration, bool looping)
 {
-	// TODO
+    outHandle.mValue = mNextTimerId;
+    mNextTimerId++;
+    
+    TimerInfo timerInfo;
+    timerInfo.mDelegate = delegate;
+    timerInfo.mDuration = duration;
+    timerInfo.mRemainingTime = duration;
+    timerInfo.mHandle = outHandle;
+    timerInfo.mIsLooping = looping;
+    timerInfo.mObj = obj;
+    
+    if(mAreTimersTicking == true)
+    {
+        timerInfo.mStatus = Pending;
+        mPendingTimers.emplace(outHandle, timerInfo);
+    }
+    else
+    {
+        timerInfo.mStatus = Active;
+        mActiveTimers.emplace(outHandle, timerInfo);
+    }
+    AddToObjMap(obj, outHandle);
 }
 
 void GameTimerManager::AddToObjMap(Object* obj, const TimerHandle& handle)

@@ -24,6 +24,7 @@ public:
 
 private:
 	float GetElapsed() const;
+    
 #ifdef _WIN32
 	LARGE_INTEGER mFreq;
 	LARGE_INTEGER mStart;

@@ -5,6 +5,7 @@
 #include "CollisionComponent.h"
 #include "Texture.h"
 #include "Math.h"
+#include "MeshComponent.h"
 
 class SphereCollision : public CollisionComponent
 {
@@ -18,7 +19,7 @@ public:
 	float GetOriginalRadius() const { return mOriginalRadius; }
 	float GetActualRadius() const { return mActualRadius; }
 	void RadiusFromTexture(TexturePtr texture);
-
+    void RadiusFromMesh(MeshPtr mesh);
 	float GetScale() const { return mScale; }
 	void SetScale(float scale) { mScale = scale; }
 private:

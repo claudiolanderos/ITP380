@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <string>
 #include "Delegate.h"
+#include "Math.h"
 
 // Used to bind an action to pressed or released
 enum InputEvent
@@ -29,6 +30,8 @@ public:
 	// Creates an axis mapping with the specified name and positive/negative keys
 	void AddAxisMapping(const std::string& name, int positiveKey, int negativeKey);
 
+    Vector2 GetMousePos();
+    
 	// Given the name of an action, binds a member function to be triggered by it
 	// Parameters:
 	// - Name of action

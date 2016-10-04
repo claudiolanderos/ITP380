@@ -48,3 +48,26 @@ void World::RemoveAllActors()
 	}
 	mActors.clear();
 }
+
+void World::AddEnemy(Enemy enemy)
+{
+    mEnemies.insert(&enemy);
+}
+
+void World::RemoveEnemy(Enemy enemy)
+{
+    mEnemies.erase(&enemy);
+}
+
+std::vector<Enemy*> World::GetEnemiesInRange(Vector3 position, float radius)
+{
+    std::vector<Enemy*> inRange;
+    for(auto& iter : mEnemies)
+    {
+        if((position + iter->GetWorldTransform().GetTranslation()).Length() >= radius)
+        {
+            inRange.push_back(iter);
+        }
+    }
+    return inRange;
+}
