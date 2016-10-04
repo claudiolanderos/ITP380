@@ -17,6 +17,7 @@ public:
     CannonTower(Game& game);
     
 private:
+    void Fire();
     MeshPtr mMesh;
     ActorPtr mChild;
 };

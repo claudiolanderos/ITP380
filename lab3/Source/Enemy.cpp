@@ -49,7 +49,7 @@ void Enemy::EndPlay()
 
 void Enemy::Slow()
 {
-//    mMeshComponent->SetTextureIndex(1);
+    mMeshComponent->SetTextureIndex(1);
     mMoveComponent->SetLinearSpeed(30.0f);
     TimerHandle handle;
     mGame.GetGameTimers().SetTimer(handle, this, &Enemy::UnSlow, 1.0f);
@@ -57,6 +57,6 @@ void Enemy::Slow()
 
 void Enemy::UnSlow()
 {
-    //mMeshComponent->SetTextureIndex(0);
+    mMeshComponent->SetTextureIndex(0);
     mMoveComponent->SetLinearSpeed(60.0f);
 }

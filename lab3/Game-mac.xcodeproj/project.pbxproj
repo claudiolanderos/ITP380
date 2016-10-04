@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		92D324FD1B697428005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FC1B697428005A86C7 /* CoreFoundation.framework */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		B41A0B121DA37A5B00565F92 /* CannonBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B41A0B101DA37A5B00565F92 /* CannonBall.cpp */; };
 		B42743D71DA2F8010068A642 /* Spawner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B42743D51DA2F8010068A642 /* Spawner.cpp */; };
 		B42743DA1DA344DE0068A642 /* Tower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B42743D81DA344DE0068A642 /* Tower.cpp */; };
 		B42743DD1DA3454F0068A642 /* CannonTower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B42743DB1DA3454F0068A642 /* CannonTower.cpp */; };
@@ -54,6 +55,8 @@
 		92D324FC1B697428005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B41A0B101DA37A5B00565F92 /* CannonBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CannonBall.cpp; sourceTree = "<group>"; };
+		B41A0B111DA37A5B00565F92 /* CannonBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CannonBall.h; sourceTree = "<group>"; };
 		B42743D51DA2F8010068A642 /* Spawner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Spawner.cpp; sourceTree = "<group>"; };
 		B42743D61DA2F8010068A642 /* Spawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spawner.h; sourceTree = "<group>"; };
 		B42743D81DA344DE0068A642 /* Tower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tower.cpp; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				B42743D91DA344DE0068A642 /* Tower.h */,
 				B43678B01D9CA91700B6C9D7 /* VertexArray.h */,
 				B43678B21D9CA91800B6C9D7 /* World.h */,
+				B41A0B111DA37A5B00565F92 /* CannonBall.h */,
 			);
 			name = Headers;
 			path = Source;
@@ -254,6 +258,7 @@
 				B42743D81DA344DE0068A642 /* Tower.cpp */,
 				B43678AF1D9CA91700B6C9D7 /* VertexArray.cpp */,
 				B43678B11D9CA91700B6C9D7 /* World.cpp */,
+				B41A0B101DA37A5B00565F92 /* CannonBall.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				B43678BA1D9CA91800B6C9D7 /* SphereCollision.cpp in Sources */,
 				B43678C01D9CA91800B6C9D7 /* Sound.cpp in Sources */,
 				B43678CF1D9CA91800B6C9D7 /* Texture.cpp in Sources */,
+				B41A0B121DA37A5B00565F92 /* CannonBall.cpp in Sources */,
 				B42743D71DA2F8010068A642 /* Spawner.cpp in Sources */,
 				B43678BC1D9CA91800B6C9D7 /* Game.cpp in Sources */,
 				B43678C21D9CA91800B6C9D7 /* SpriteComponent.cpp in Sources */,

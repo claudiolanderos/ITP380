@@ -61,10 +61,8 @@ bool Game::Init()
 
 void Game::RunLoop()
 {
-	// TODO
     while (!mShouldQuit)
     {
-        // TODO: Code will go here!
         ProcessInput();
         Tick();
         GenerateOutput();

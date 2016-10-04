@@ -49,12 +49,12 @@ void World::RemoveAllActors()
 	mActors.clear();
 }
 
-void World::AddEnemy(Enemy enemy)
+void World::AddEnemy(Enemy& enemy)
 {
     mEnemies.insert(&enemy);
 }
 
-void World::RemoveEnemy(Enemy enemy)
+void World::RemoveEnemy(Enemy& enemy)
 {
     mEnemies.erase(&enemy);
 }
@@ -64,10 +64,28 @@ std::vector<Enemy*> World::GetEnemiesInRange(Vector3 position, float radius)
     std::vector<Enemy*> inRange;
     for(auto& iter : mEnemies)
     {
-        if((position + iter->GetWorldTransform().GetTranslation()).Length() >= radius)
+        if((position - iter->GetWorldTransform().GetTranslation()).Length() <= radius)
         {
             inRange.push_back(iter);
         }
     }
     return inRange;
+}
+
+Enemy* World::GetClosesEnemy(Vector3 position)
+{
+    float closest = 150.0f;
+    float distance;
+    Enemy* closestEnemy = nullptr;
+    
+    for(auto& iter : mEnemies)
+    {
+        distance = (position - iter->GetWorldTransform().GetTranslation()).Length();
+        if(distance < 150.0f && distance < closest)
+        {
+            closest = distance;
+            closestEnemy = iter;
+        }
+    }
+    return closestEnemy;
 }

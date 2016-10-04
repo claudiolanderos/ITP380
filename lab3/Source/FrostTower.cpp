@@ -26,7 +26,7 @@ FrostTower::FrostTower(Game& game)
 void FrostTower::FreezeEnemies()
 {
     std::vector<Enemy*> inRange;
-    inRange = mGame.GetWorld().GetEnemiesInRange(this->GetPosition(), 150.0f);
+    inRange = mGame.GetWorld().GetEnemiesInRange(this->GetWorldTransform().GetTranslation(), 75.0f);
     
     for(auto iter : inRange)
     {

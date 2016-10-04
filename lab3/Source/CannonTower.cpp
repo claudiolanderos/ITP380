@@ -18,4 +18,29 @@ CannonTower::CannonTower(Game& game)
     auto meshComponent = MeshComponent::Create(*mChild);
     mMesh = game.GetAssetCache().Load<Mesh>("Meshes/Cannon.itpmesh2");
     meshComponent->SetMesh(mMesh);
+    
+    
+    TimerHandle handle;
+    game.GetGameTimers().SetTimer(handle, this, &CannonTower::Fire, 1.0f, true);
+}
+
+void CannonTower::Fire()
+{
+    Enemy* enemy = mGame.GetWorld().GetClosesEnemy(this->GetWorldTransform().GetTranslation());
+    
+    if(enemy != nullptr)
+    {
+        Vector3 vector = enemy->GetWorldTransform().GetTranslation() - this->GetWorldTransform().GetTranslation();
+        vector.Normalize();
+        float angle = Dot(vector,Vector3::UnitX);
+        //angle += Math::Pi;
+        Vector3 cross = Cross(Vector3::UnitX, vector);
+        if(cross.z < 0)
+        {
+            angle *= -1;
+        }
+        angle = Math::Cos(angle);
+
+        mChild->SetRotation(angle);
+    }
 }

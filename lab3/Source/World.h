@@ -21,9 +21,11 @@ public:
 	
 	void RemoveAllActors();
     
-    void AddEnemy(Enemy enemy);
+    void AddEnemy(Enemy& enemy);
     
-    void RemoveEnemy(Enemy enemy);
+    void RemoveEnemy(Enemy& enemy);
+    
+    Enemy* GetClosesEnemy(Vector3 position);
     
     std::vector<Enemy*> GetEnemiesInRange(Vector3 position, float radius);
 private:

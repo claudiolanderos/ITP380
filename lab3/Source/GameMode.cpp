@@ -122,6 +122,7 @@ void GameMode::CreateTiles()
     auto coll = SphereCollision::Create(*mTiles[NUM_ROWS / 2][NUM_COLS - 1]);
 }
 
+
 void GameMode::SpawnFrostTower()
 {
     if(mSelectedTile != nullptr && mSelectedTile->GetTower() == nullptr)
