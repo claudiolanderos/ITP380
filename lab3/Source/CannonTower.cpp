@@ -44,6 +44,6 @@ void CannonTower::Fire()
         auto ball = CannonBall::Spawn(mGame);
         ball->SetPosition(this->GetWorldTransform().GetTranslation());
         mChild->SetRotation(angle);
-        ball->SetRotation(this->GetRotation());
+        ball->SetRotation(mChild->GetRotation());
     }
 }
