@@ -7,7 +7,7 @@
 //
 
 #pragma once
-#include "Component.h"
+#include "MoveComponent.h"
 
 class CameraComponent : public Component
 {
@@ -16,7 +16,18 @@ public:
     CameraComponent(Actor& owner);
     
     void Tick(float deltaTime) override;
-private:
     
+    void SetMoveComponent(MoveComponentPtr moveComponent) { mMoveComponent = moveComponent; }
+    
+    Vector3 GetIdealPosition();
+    
+    void SnapToIdealPosition();
+
+private:
+    MoveComponentPtr mMoveComponent;
+    
+    Vector3 mActualPosition;
+    
+    Vector3 mVelocity;
 };
 DECL_PTR(CameraComponent);
