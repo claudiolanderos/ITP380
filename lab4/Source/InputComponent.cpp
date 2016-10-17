@@ -22,9 +22,9 @@ void InputComponent::BindLinearAxis(const std::string &name)
     mOwner.GetGame().GetInput().BindAxis(name, this, &InputComponent::OnLinearAxis);
 }
 
-void InputComponent::BindAngularAxis(const std::string &name)
+void InputComponent::BindYawAxis(const std::string &name)
 {
-    mOwner.GetGame().GetInput().BindAxis(name, this, &InputComponent::OnAngularAxis);
+    mOwner.GetGame().GetInput().BindAxis(name, this, &InputComponent::OnYawAxis);
 }
 
 void InputComponent::OnLinearAxis(float value)
@@ -32,7 +32,17 @@ void InputComponent::OnLinearAxis(float value)
     SetLinearAxis(value);
 }
 
-void InputComponent::OnAngularAxis(float value)
+void InputComponent::OnYawAxis(float value)
 {
-    SetAngularAxis(value);
+    SetYawAxis(value);
+}
+
+void InputComponent::BindPitchAxis(const std::string &name)
+{
+    mOwner.GetGame().GetInput().BindAxis(name, this, &InputComponent::OnPitchAxis);
+}
+
+void InputComponent::OnPitchAxis(float value)
+{
+    SetPitchAxis(value);
 }

@@ -32,7 +32,7 @@ Ship::Ship(Game& game)
     mInputComponent = InputComponent::Create(*this, Component::PreTick);
     mInputComponent->SetAngularSpeed(Math::Pi);
     mInputComponent->SetLinearSpeed(400.0f);
-    
+    mInputComponent->SetPitchSpeed(Math::Pi);
     mCameraComponent = CameraComponent::Create(*this);
     mCameraComponent->SetMoveComponent(mInputComponent);
     auto coll = SphereCollision::Create(*this);
@@ -59,9 +59,9 @@ void Ship::FireMissile()
 
 void Ship::BeginPlay()
 {
-    mGame.GetInput().BindAction("Fire", IE_Pressed, this, &Ship::FireMissile);
     mInputComponent->BindLinearAxis("Move");
-    mInputComponent->BindAngularAxis("Rotate");
+    mInputComponent->BindYawAxis("Yaw");
+    mInputComponent->BindPitchAxis("Pitch");
     mCameraComponent->SnapToIdealPosition();
 }
 

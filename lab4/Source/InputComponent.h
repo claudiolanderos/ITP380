@@ -18,10 +18,14 @@ public:
     
     void BindLinearAxis(const std::string& name);
     
-    void BindAngularAxis(const std::string& name);
+    void BindYawAxis(const std::string& name);
+    
+    void BindPitchAxis(const std::string& name);
+    
+    void OnPitchAxis(float value);
     
     void OnLinearAxis(float value);
     
-    void OnAngularAxis(float value);
+    void OnYawAxis(float value);
 };
 DECL_PTR(InputComponent);

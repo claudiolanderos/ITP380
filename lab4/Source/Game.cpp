@@ -150,6 +150,7 @@ void Game::AddInputMappings()
     mInput.AddActionMapping("Quit", SDLK_ESCAPE);
     mInput.BindAction("Quit", IE_Released, this, &Game::Quit);
     mInput.AddActionMapping("Fire", SDLK_SPACE);
-    mInput.AddAxisMapping("Move", 'w', 's');
-    mInput.AddAxisMapping("Rotate", 'a', 'd');
+    mInput.AddAxisMapping("Move", 'p', SDLK_SEMICOLON);
+    mInput.AddAxisMapping("Yaw", 'a', 'd');
+    mInput.AddAxisMapping("Pitch", 'w', 's');
 }

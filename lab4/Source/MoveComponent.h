@@ -24,13 +24,21 @@ public:
 
 	// AddTo calls should always be +1.0f or -1.0f
 	void AddToLinearAxis(float delta);
-	void AddToAngularAxis(float delta);
+	void AddToYawAxis(float delta);
 
 	void SetLinearAxis(float axis);
 	float GetLinearAxis() const { return mLinearAxis; }
 
-	void SetAngularAxis(float axis);
-	float GetAngularAxis() const { return mAngularAxis; }
+	void SetYawAxis(float axis);
+	float GetYawAxis() const { return mYawAxis; }
+    
+    void SetPitchSpeed(float speed) { mPitchSpeed = speed; }
+    float GetPitchSpeed() { return mPitchSpeed; }
+    
+    void AddToPitchAxis(float delta);
+    
+    void SetPitchAxis(float axis) { mPitchAxis = axis; }
+    float GetPitchAxis() { return mPitchAxis; }
 private:
 	Vector3 mVelocity;
 
@@ -38,7 +46,10 @@ private:
 	float mAngularSpeed;
 
 	float mLinearAxis;
-	float mAngularAxis;
+	float mYawAxis;
+    
+    float mPitchSpeed;
+    float mPitchAxis;
 };
 
 DECL_PTR(MoveComponent);

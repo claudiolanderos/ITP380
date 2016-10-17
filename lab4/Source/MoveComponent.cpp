@@ -10,18 +10,21 @@ MoveComponent::MoveComponent(Actor& owner)
 	,mLinearSpeed(0.0f)
 	,mAngularSpeed(0.0f)
 	,mLinearAxis(0.0f)
-	,mAngularAxis(0.0f)
+	,mYawAxis(0.0f)
 {
 
 }
 
 void MoveComponent::Tick(float deltaTime)
 {
-    if(!Math::IsZero(mAngularAxis)){
+    if(!Math::IsZero(mYawAxis) || !Math::IsZero(mPitchAxis)){
         Quaternion rotation = mOwner.GetRotation();
-        float incremental = mAngularSpeed * mAngularAxis * deltaTime;
-        Quaternion incrementalQuaternion(mOwner.GetWorldTransform().GetZAxis(), incremental);
-        rotation = Concatenate(rotation, incrementalQuaternion);
+        float incrementalYaw = mAngularSpeed * mYawAxis * deltaTime;
+        float incrementalPitch = mPitchSpeed * mPitchAxis * deltaTime;
+        Quaternion incrementalPitchQuaternion(mOwner.GetWorldTransform().GetYAxis(), incrementalPitch);
+        Quaternion incrementalYawQuaternion(mOwner.GetWorldTransform().GetZAxis(), incrementalYaw);
+        rotation = Concatenate(rotation, incrementalYawQuaternion);
+        rotation =  Concatenate(rotation, incrementalPitchQuaternion);
         mOwner.SetRotation(rotation);
     }
     if (!Math::IsZero(mLinearAxis))
@@ -45,10 +48,16 @@ void MoveComponent::AddToLinearAxis(float delta)
 	mLinearAxis = Math::Clamp(mLinearAxis, -1.0f, 1.0f);
 }
 
-void MoveComponent::AddToAngularAxis(float delta)
+void MoveComponent::AddToYawAxis(float delta)
 {
-	mAngularAxis += delta;
-	mAngularAxis = Math::Clamp(mAngularAxis, -1.0f, 1.0f);
+	mYawAxis += delta;
+	mYawAxis = Math::Clamp(mYawAxis, -1.0f, 1.0f);
+}
+
+void MoveComponent::AddToPitchAxis(float delta)
+{
+    mYawAxis += delta;
+    mYawAxis =  Math::Clamp(mYawAxis, -1.0f, 1.0f);
 }
 
 void MoveComponent::SetLinearAxis(float axis)
@@ -56,7 +65,7 @@ void MoveComponent::SetLinearAxis(float axis)
 	mLinearAxis = Math::Clamp(axis, -1.0f, 1.0f);
 }
 
-void MoveComponent::SetAngularAxis(float axis)
+void MoveComponent::SetYawAxis(float axis)
 {
-	mAngularAxis = Math::Clamp(axis, -1.0f, 1.0f);
+	mYawAxis = Math::Clamp(axis, -1.0f, 1.0f);
 }
