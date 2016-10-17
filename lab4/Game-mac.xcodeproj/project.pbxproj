@@ -7,41 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9237DE541B6758C700D06F78 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9237DE521B6758C700D06F78 /* InputManager.cpp */; };
 		92CCAE281B75AA7A00A7791F /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CCAE261B75AA7A00A7791F /* Font.cpp */; };
 		92CCAE291B75AA7A00A7791F /* FontComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CCAE271B75AA7A00A7791F /* FontComponent.cpp */; };
 		92D324FD1B697428005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FC1B697428005A86C7 /* CoreFoundation.framework */; };
-		92D325071B6974CE005A86C7 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D325031B6974CE005A86C7 /* Mesh.cpp */; };
-		92D5631F1B673D5500E689CE /* GameTimers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D5631E1B673D5500E689CE /* GameTimers.cpp */; };
-		92E46E7B1B634FCA0035CD21 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E631B634FCA0035CD21 /* Actor.cpp */; };
-		92E46E7C1B634FCA0035CD21 /* Asset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E641B634FCA0035CD21 /* Asset.cpp */; };
-		92E46E7D1B634FCA0035CD21 /* AssetCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E651B634FCA0035CD21 /* AssetCache.cpp */; };
-		92E46E7F1B634FCA0035CD21 /* CollisionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E671B634FCA0035CD21 /* CollisionComponent.cpp */; };
-		92E46E801B634FCA0035CD21 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E681B634FCA0035CD21 /* Component.cpp */; };
-		92E46E811B634FCA0035CD21 /* DrawComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E691B634FCA0035CD21 /* DrawComponent.cpp */; };
-		92E46E821B634FCA0035CD21 /* FrameTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E6A1B634FCA0035CD21 /* FrameTimer.cpp */; };
-		92E46E831B634FCA0035CD21 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E6B1B634FCA0035CD21 /* Game.cpp */; };
-		92E46E851B634FCA0035CD21 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E6D1B634FCA0035CD21 /* Main.cpp */; };
-		92E46E861B634FCA0035CD21 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E6E1B634FCA0035CD21 /* Math.cpp */; };
-		92E46E871B634FCA0035CD21 /* MoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E6F1B634FCA0035CD21 /* MoveComponent.cpp */; };
-		92E46E881B634FCA0035CD21 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E701B634FCA0035CD21 /* Object.cpp */; };
-		92E46E891B634FCA0035CD21 /* PhysWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E711B634FCA0035CD21 /* PhysWorld.cpp */; };
-		92E46E8A1B634FCA0035CD21 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E721B634FCA0035CD21 /* Random.cpp */; };
-		92E46E8B1B634FCA0035CD21 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E731B634FCA0035CD21 /* Renderer.cpp */; };
-		92E46E8C1B634FCA0035CD21 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E741B634FCA0035CD21 /* Shader.cpp */; };
-		92E46E8E1B634FCA0035CD21 /* SphereCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E761B634FCA0035CD21 /* SphereCollision.cpp */; };
-		92E46E8F1B634FCA0035CD21 /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E771B634FCA0035CD21 /* SpriteComponent.cpp */; };
-		92E46E901B634FCA0035CD21 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E781B634FCA0035CD21 /* Texture.cpp */; };
-		92E46E911B634FCA0035CD21 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E791B634FCA0035CD21 /* VertexArray.cpp */; };
-		92E46E921B634FCA0035CD21 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E46E7A1B634FCA0035CD21 /* World.cpp */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		B4CBEE701DAECF7B001EADC2 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE521DAECF7B001EADC2 /* Actor.cpp */; };
+		B4CBEE711DAECF7B001EADC2 /* Asset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE531DAECF7B001EADC2 /* Asset.cpp */; };
+		B4CBEE721DAECF7B001EADC2 /* AssetCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE541DAECF7B001EADC2 /* AssetCache.cpp */; };
+		B4CBEE731DAECF7B001EADC2 /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE551DAECF7B001EADC2 /* Asteroid.cpp */; };
+		B4CBEE741DAECF7B001EADC2 /* AudioComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE561DAECF7B001EADC2 /* AudioComponent.cpp */; };
+		B4CBEE751DAECF7B001EADC2 /* CollisionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE571DAECF7B001EADC2 /* CollisionComponent.cpp */; };
+		B4CBEE761DAECF7B001EADC2 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE581DAECF7B001EADC2 /* Component.cpp */; };
+		B4CBEE771DAECF7B001EADC2 /* DrawComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE591DAECF7B001EADC2 /* DrawComponent.cpp */; };
+		B4CBEE781DAECF7B001EADC2 /* FrameTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5A1DAECF7B001EADC2 /* FrameTimer.cpp */; };
+		B4CBEE791DAECF7B001EADC2 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5B1DAECF7B001EADC2 /* Game.cpp */; };
+		B4CBEE7A1DAECF7B001EADC2 /* GameTimers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5C1DAECF7B001EADC2 /* GameTimers.cpp */; };
+		B4CBEE7B1DAECF7B001EADC2 /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5D1DAECF7B001EADC2 /* InputComponent.cpp */; };
+		B4CBEE7C1DAECF7B001EADC2 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5E1DAECF7B001EADC2 /* InputManager.cpp */; };
+		B4CBEE7D1DAECF7B001EADC2 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE5F1DAECF7B001EADC2 /* Main.cpp */; };
+		B4CBEE7E1DAECF7B001EADC2 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE601DAECF7B001EADC2 /* Math.cpp */; };
+		B4CBEE7F1DAECF7B001EADC2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE611DAECF7B001EADC2 /* Mesh.cpp */; };
+		B4CBEE801DAECF7B001EADC2 /* MeshComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE621DAECF7B001EADC2 /* MeshComponent.cpp */; };
+		B4CBEE811DAECF7B001EADC2 /* MoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE631DAECF7B001EADC2 /* MoveComponent.cpp */; };
+		B4CBEE821DAECF7B001EADC2 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE641DAECF7B001EADC2 /* Object.cpp */; };
+		B4CBEE831DAECF7B001EADC2 /* PhysWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE651DAECF7B001EADC2 /* PhysWorld.cpp */; };
+		B4CBEE841DAECF7B001EADC2 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE661DAECF7B001EADC2 /* Random.cpp */; };
+		B4CBEE851DAECF7B001EADC2 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE671DAECF7B001EADC2 /* Renderer.cpp */; };
+		B4CBEE861DAECF7B001EADC2 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE681DAECF7B001EADC2 /* Shader.cpp */; };
+		B4CBEE871DAECF7B001EADC2 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE691DAECF7B001EADC2 /* Ship.cpp */; };
+		B4CBEE881DAECF7B001EADC2 /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6A1DAECF7B001EADC2 /* Sound.cpp */; };
+		B4CBEE891DAECF7B001EADC2 /* SphereCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6B1DAECF7B001EADC2 /* SphereCollision.cpp */; };
+		B4CBEE8A1DAECF7B001EADC2 /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6C1DAECF7B001EADC2 /* SpriteComponent.cpp */; };
+		B4CBEE8B1DAECF7B001EADC2 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6D1DAECF7B001EADC2 /* Texture.cpp */; };
+		B4CBEE8C1DAECF7B001EADC2 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6E1DAECF7B001EADC2 /* VertexArray.cpp */; };
+		B4CBEE8D1DAECF7B001EADC2 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE6F1DAECF7B001EADC2 /* World.cpp */; };
+		B4CBEE901DAED249001EADC2 /* GameMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE8E1DAED249001EADC2 /* GameMode.cpp */; };
+		B4CBEE931DB4228A001EADC2 /* HUD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE911DB4228A001EADC2 /* HUD.cpp */; };
+		B4CBEE961DB42E0E001EADC2 /* CameraComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE941DB42E0E001EADC2 /* CameraComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		92164FE31B636C31000ACF4A /* Sprite.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Sprite.frag; sourceTree = "<group>"; };
 		92164FE41B636C31000ACF4A /* Sprite.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Sprite.vert; sourceTree = "<group>"; };
-		9237DE501B6758B200D06F78 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
-		9237DE521B6758C700D06F78 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		9257903A1B69C795007C6315 /* BasicMesh.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicMesh.frag; sourceTree = "<group>"; };
 		9257903B1B69C795007C6315 /* BasicMesh.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicMesh.vert; sourceTree = "<group>"; };
 		92CCAE241B75AA6600A7791F /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
@@ -49,55 +56,75 @@
 		92CCAE261B75AA7A00A7791F /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		92CCAE271B75AA7A00A7791F /* FontComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontComponent.cpp; sourceTree = "<group>"; };
 		92D324FC1B697428005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		92D324FF1B6974A7005A86C7 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
-		92D325031B6974CE005A86C7 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
-		92D5631C1B673D4E00E689CE /* Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
-		92D5631D1B673D4E00E689CE /* GameTimers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimers.h; sourceTree = "<group>"; };
-		92D5631E1B673D5500E689CE /* GameTimers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTimers.cpp; sourceTree = "<group>"; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E46E4A1B634F950035CD21 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
-		92E46E4B1B634F950035CD21 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
-		92E46E4C1B634F950035CD21 /* AssetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCache.h; sourceTree = "<group>"; };
-		92E46E4E1B634F950035CD21 /* CollisionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionComponent.h; sourceTree = "<group>"; };
-		92E46E4F1B634F950035CD21 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		92E46E501B634F950035CD21 /* DrawComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawComponent.h; sourceTree = "<group>"; };
-		92E46E511B634F950035CD21 /* FrameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameTimer.h; sourceTree = "<group>"; };
-		92E46E521B634F950035CD21 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		92E46E541B634F950035CD21 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
-		92E46E551B634F950035CD21 /* MoveComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveComponent.h; sourceTree = "<group>"; };
-		92E46E561B634F950035CD21 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		92E46E571B634F950035CD21 /* ObjectMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMacros.h; sourceTree = "<group>"; };
-		92E46E581B634F950035CD21 /* PhysWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysWorld.h; sourceTree = "<group>"; };
-		92E46E591B634F950035CD21 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
-		92E46E5A1B634F950035CD21 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
-		92E46E5B1B634F950035CD21 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
-		92E46E5D1B634F950035CD21 /* SphereCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereCollision.h; sourceTree = "<group>"; };
-		92E46E5E1B634F950035CD21 /* SpriteComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
-		92E46E5F1B634F950035CD21 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
-		92E46E601B634F950035CD21 /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
-		92E46E611B634F950035CD21 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
-		92E46E631B634FCA0035CD21 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
-		92E46E641B634FCA0035CD21 /* Asset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asset.cpp; sourceTree = "<group>"; };
-		92E46E651B634FCA0035CD21 /* AssetCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssetCache.cpp; sourceTree = "<group>"; };
-		92E46E671B634FCA0035CD21 /* CollisionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionComponent.cpp; sourceTree = "<group>"; };
-		92E46E681B634FCA0035CD21 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
-		92E46E691B634FCA0035CD21 /* DrawComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawComponent.cpp; sourceTree = "<group>"; };
-		92E46E6A1B634FCA0035CD21 /* FrameTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameTimer.cpp; sourceTree = "<group>"; };
-		92E46E6B1B634FCA0035CD21 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		92E46E6D1B634FCA0035CD21 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
-		92E46E6E1B634FCA0035CD21 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
-		92E46E6F1B634FCA0035CD21 /* MoveComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveComponent.cpp; sourceTree = "<group>"; };
-		92E46E701B634FCA0035CD21 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
-		92E46E711B634FCA0035CD21 /* PhysWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysWorld.cpp; sourceTree = "<group>"; };
-		92E46E721B634FCA0035CD21 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
-		92E46E731B634FCA0035CD21 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
-		92E46E741B634FCA0035CD21 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
-		92E46E761B634FCA0035CD21 /* SphereCollision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SphereCollision.cpp; sourceTree = "<group>"; };
-		92E46E771B634FCA0035CD21 /* SpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteComponent.cpp; sourceTree = "<group>"; };
-		92E46E781B634FCA0035CD21 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
-		92E46E791B634FCA0035CD21 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
-		92E46E7A1B634FCA0035CD21 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B4CBEE331DAECF6E001EADC2 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		B4CBEE341DAECF6E001EADC2 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
+		B4CBEE351DAECF6E001EADC2 /* AssetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCache.h; sourceTree = "<group>"; };
+		B4CBEE361DAECF6E001EADC2 /* Asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
+		B4CBEE371DAECF6E001EADC2 /* AudioComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioComponent.h; sourceTree = "<group>"; };
+		B4CBEE381DAECF6E001EADC2 /* CollisionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionComponent.h; sourceTree = "<group>"; };
+		B4CBEE391DAECF6E001EADC2 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		B4CBEE3A1DAECF6E001EADC2 /* Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
+		B4CBEE3B1DAECF6E001EADC2 /* DrawComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawComponent.h; sourceTree = "<group>"; };
+		B4CBEE3C1DAECF6E001EADC2 /* FrameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameTimer.h; sourceTree = "<group>"; };
+		B4CBEE3D1DAECF6E001EADC2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B4CBEE3E1DAECF6E001EADC2 /* GameTimers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimers.h; sourceTree = "<group>"; };
+		B4CBEE3F1DAECF6E001EADC2 /* InputComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputComponent.h; sourceTree = "<group>"; };
+		B4CBEE401DAECF6E001EADC2 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		B4CBEE411DAECF6E001EADC2 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		B4CBEE421DAECF6E001EADC2 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		B4CBEE431DAECF6E001EADC2 /* MeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshComponent.h; sourceTree = "<group>"; };
+		B4CBEE441DAECF6E001EADC2 /* MoveComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveComponent.h; sourceTree = "<group>"; };
+		B4CBEE451DAECF6E001EADC2 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		B4CBEE461DAECF6E001EADC2 /* ObjectMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMacros.h; sourceTree = "<group>"; };
+		B4CBEE471DAECF6E001EADC2 /* PhysWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysWorld.h; sourceTree = "<group>"; };
+		B4CBEE481DAECF6E001EADC2 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		B4CBEE491DAECF6E001EADC2 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		B4CBEE4A1DAECF6E001EADC2 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		B4CBEE4B1DAECF6E001EADC2 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		B4CBEE4C1DAECF6E001EADC2 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		B4CBEE4D1DAECF6E001EADC2 /* SphereCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereCollision.h; sourceTree = "<group>"; };
+		B4CBEE4E1DAECF6E001EADC2 /* SpriteComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteComponent.h; sourceTree = "<group>"; };
+		B4CBEE4F1DAECF6E001EADC2 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		B4CBEE501DAECF6E001EADC2 /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
+		B4CBEE511DAECF6E001EADC2 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		B4CBEE521DAECF7B001EADC2 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		B4CBEE531DAECF7B001EADC2 /* Asset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asset.cpp; sourceTree = "<group>"; };
+		B4CBEE541DAECF7B001EADC2 /* AssetCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssetCache.cpp; sourceTree = "<group>"; };
+		B4CBEE551DAECF7B001EADC2 /* Asteroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asteroid.cpp; sourceTree = "<group>"; };
+		B4CBEE561DAECF7B001EADC2 /* AudioComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE571DAECF7B001EADC2 /* CollisionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE581DAECF7B001EADC2 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		B4CBEE591DAECF7B001EADC2 /* DrawComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE5A1DAECF7B001EADC2 /* FrameTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameTimer.cpp; sourceTree = "<group>"; };
+		B4CBEE5B1DAECF7B001EADC2 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		B4CBEE5C1DAECF7B001EADC2 /* GameTimers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTimers.cpp; sourceTree = "<group>"; };
+		B4CBEE5D1DAECF7B001EADC2 /* InputComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE5E1DAECF7B001EADC2 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
+		B4CBEE5F1DAECF7B001EADC2 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		B4CBEE601DAECF7B001EADC2 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		B4CBEE611DAECF7B001EADC2 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		B4CBEE621DAECF7B001EADC2 /* MeshComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE631DAECF7B001EADC2 /* MoveComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE641DAECF7B001EADC2 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		B4CBEE651DAECF7B001EADC2 /* PhysWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysWorld.cpp; sourceTree = "<group>"; };
+		B4CBEE661DAECF7B001EADC2 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		B4CBEE671DAECF7B001EADC2 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B4CBEE681DAECF7B001EADC2 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		B4CBEE691DAECF7B001EADC2 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		B4CBEE6A1DAECF7B001EADC2 /* Sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
+		B4CBEE6B1DAECF7B001EADC2 /* SphereCollision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SphereCollision.cpp; sourceTree = "<group>"; };
+		B4CBEE6C1DAECF7B001EADC2 /* SpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE6D1DAECF7B001EADC2 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		B4CBEE6E1DAECF7B001EADC2 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
+		B4CBEE6F1DAECF7B001EADC2 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		B4CBEE8E1DAED249001EADC2 /* GameMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMode.cpp; sourceTree = "<group>"; };
+		B4CBEE8F1DAED249001EADC2 /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
+		B4CBEE911DB4228A001EADC2 /* HUD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUD.cpp; sourceTree = "<group>"; };
+		B4CBEE921DB4228A001EADC2 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		B4CBEE941DB42E0E001EADC2 /* CameraComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraComponent.cpp; sourceTree = "<group>"; };
+		B4CBEE951DB42E0E001EADC2 /* CameraComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,33 +175,42 @@
 		92E46E011B634ED60035CD21 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				92E46E4A1B634F950035CD21 /* Actor.h */,
-				92E46E4B1B634F950035CD21 /* Asset.h */,
-				92E46E4C1B634F950035CD21 /* AssetCache.h */,
-				92E46E4E1B634F950035CD21 /* CollisionComponent.h */,
-				92E46E4F1B634F950035CD21 /* Component.h */,
-				92D5631C1B673D4E00E689CE /* Delegate.h */,
-				92E46E501B634F950035CD21 /* DrawComponent.h */,
+				B4CBEE331DAECF6E001EADC2 /* Actor.h */,
+				B4CBEE8F1DAED249001EADC2 /* GameMode.h */,
+				B4CBEE341DAECF6E001EADC2 /* Asset.h */,
+				B4CBEE351DAECF6E001EADC2 /* AssetCache.h */,
+				B4CBEE361DAECF6E001EADC2 /* Asteroid.h */,
+				B4CBEE371DAECF6E001EADC2 /* AudioComponent.h */,
+				B4CBEE381DAECF6E001EADC2 /* CollisionComponent.h */,
+				B4CBEE391DAECF6E001EADC2 /* Component.h */,
+				B4CBEE3A1DAECF6E001EADC2 /* Delegate.h */,
+				B4CBEE3B1DAECF6E001EADC2 /* DrawComponent.h */,
+				B4CBEE3C1DAECF6E001EADC2 /* FrameTimer.h */,
+				B4CBEE3D1DAECF6E001EADC2 /* Game.h */,
+				B4CBEE3E1DAECF6E001EADC2 /* GameTimers.h */,
+				B4CBEE3F1DAECF6E001EADC2 /* InputComponent.h */,
+				B4CBEE401DAECF6E001EADC2 /* InputManager.h */,
+				B4CBEE411DAECF6E001EADC2 /* Math.h */,
+				B4CBEE421DAECF6E001EADC2 /* Mesh.h */,
+				B4CBEE431DAECF6E001EADC2 /* MeshComponent.h */,
+				B4CBEE441DAECF6E001EADC2 /* MoveComponent.h */,
+				B4CBEE451DAECF6E001EADC2 /* Object.h */,
+				B4CBEE461DAECF6E001EADC2 /* ObjectMacros.h */,
+				B4CBEE471DAECF6E001EADC2 /* PhysWorld.h */,
+				B4CBEE481DAECF6E001EADC2 /* Random.h */,
+				B4CBEE491DAECF6E001EADC2 /* Renderer.h */,
+				B4CBEE4A1DAECF6E001EADC2 /* Shader.h */,
+				B4CBEE4B1DAECF6E001EADC2 /* Ship.h */,
+				B4CBEE4C1DAECF6E001EADC2 /* Sound.h */,
+				B4CBEE4D1DAECF6E001EADC2 /* SphereCollision.h */,
+				B4CBEE4E1DAECF6E001EADC2 /* SpriteComponent.h */,
+				B4CBEE4F1DAECF6E001EADC2 /* Texture.h */,
+				B4CBEE501DAECF6E001EADC2 /* VertexArray.h */,
+				B4CBEE511DAECF6E001EADC2 /* World.h */,
 				92CCAE241B75AA6600A7791F /* Font.h */,
 				92CCAE251B75AA6600A7791F /* FontComponent.h */,
-				92E46E511B634F950035CD21 /* FrameTimer.h */,
-				92E46E521B634F950035CD21 /* Game.h */,
-				92D5631D1B673D4E00E689CE /* GameTimers.h */,
-				9237DE501B6758B200D06F78 /* InputManager.h */,
-				92E46E541B634F950035CD21 /* Math.h */,
-				92D324FF1B6974A7005A86C7 /* Mesh.h */,
-				92E46E551B634F950035CD21 /* MoveComponent.h */,
-				92E46E561B634F950035CD21 /* Object.h */,
-				92E46E571B634F950035CD21 /* ObjectMacros.h */,
-				92E46E581B634F950035CD21 /* PhysWorld.h */,
-				92E46E591B634F950035CD21 /* Random.h */,
-				92E46E5A1B634F950035CD21 /* Renderer.h */,
-				92E46E5B1B634F950035CD21 /* Shader.h */,
-				92E46E5D1B634F950035CD21 /* SphereCollision.h */,
-				92E46E5E1B634F950035CD21 /* SpriteComponent.h */,
-				92E46E5F1B634F950035CD21 /* Texture.h */,
-				92E46E601B634F950035CD21 /* VertexArray.h */,
-				92E46E611B634F950035CD21 /* World.h */,
+				B4CBEE921DB4228A001EADC2 /* HUD.h */,
+				B4CBEE951DB42E0E001EADC2 /* CameraComponent.h */,
 			);
 			name = Headers;
 			path = Source;
@@ -183,32 +219,41 @@
 		92E46E621B634F9D0035CD21 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				92E46E631B634FCA0035CD21 /* Actor.cpp */,
-				92E46E641B634FCA0035CD21 /* Asset.cpp */,
-				92E46E651B634FCA0035CD21 /* AssetCache.cpp */,
-				92E46E671B634FCA0035CD21 /* CollisionComponent.cpp */,
-				92E46E681B634FCA0035CD21 /* Component.cpp */,
-				92E46E691B634FCA0035CD21 /* DrawComponent.cpp */,
+				B4CBEE941DB42E0E001EADC2 /* CameraComponent.cpp */,
+				B4CBEE911DB4228A001EADC2 /* HUD.cpp */,
+				B4CBEE8E1DAED249001EADC2 /* GameMode.cpp */,
+				B4CBEE521DAECF7B001EADC2 /* Actor.cpp */,
+				B4CBEE531DAECF7B001EADC2 /* Asset.cpp */,
+				B4CBEE541DAECF7B001EADC2 /* AssetCache.cpp */,
+				B4CBEE551DAECF7B001EADC2 /* Asteroid.cpp */,
+				B4CBEE561DAECF7B001EADC2 /* AudioComponent.cpp */,
+				B4CBEE571DAECF7B001EADC2 /* CollisionComponent.cpp */,
+				B4CBEE581DAECF7B001EADC2 /* Component.cpp */,
+				B4CBEE591DAECF7B001EADC2 /* DrawComponent.cpp */,
+				B4CBEE5A1DAECF7B001EADC2 /* FrameTimer.cpp */,
+				B4CBEE5B1DAECF7B001EADC2 /* Game.cpp */,
+				B4CBEE5C1DAECF7B001EADC2 /* GameTimers.cpp */,
+				B4CBEE5D1DAECF7B001EADC2 /* InputComponent.cpp */,
+				B4CBEE5E1DAECF7B001EADC2 /* InputManager.cpp */,
+				B4CBEE5F1DAECF7B001EADC2 /* Main.cpp */,
+				B4CBEE601DAECF7B001EADC2 /* Math.cpp */,
+				B4CBEE611DAECF7B001EADC2 /* Mesh.cpp */,
+				B4CBEE621DAECF7B001EADC2 /* MeshComponent.cpp */,
+				B4CBEE631DAECF7B001EADC2 /* MoveComponent.cpp */,
+				B4CBEE641DAECF7B001EADC2 /* Object.cpp */,
+				B4CBEE651DAECF7B001EADC2 /* PhysWorld.cpp */,
+				B4CBEE661DAECF7B001EADC2 /* Random.cpp */,
+				B4CBEE671DAECF7B001EADC2 /* Renderer.cpp */,
+				B4CBEE681DAECF7B001EADC2 /* Shader.cpp */,
+				B4CBEE691DAECF7B001EADC2 /* Ship.cpp */,
+				B4CBEE6A1DAECF7B001EADC2 /* Sound.cpp */,
+				B4CBEE6B1DAECF7B001EADC2 /* SphereCollision.cpp */,
+				B4CBEE6C1DAECF7B001EADC2 /* SpriteComponent.cpp */,
+				B4CBEE6D1DAECF7B001EADC2 /* Texture.cpp */,
+				B4CBEE6E1DAECF7B001EADC2 /* VertexArray.cpp */,
+				B4CBEE6F1DAECF7B001EADC2 /* World.cpp */,
 				92CCAE261B75AA7A00A7791F /* Font.cpp */,
 				92CCAE271B75AA7A00A7791F /* FontComponent.cpp */,
-				92E46E6A1B634FCA0035CD21 /* FrameTimer.cpp */,
-				92E46E6B1B634FCA0035CD21 /* Game.cpp */,
-				92D5631E1B673D5500E689CE /* GameTimers.cpp */,
-				9237DE521B6758C700D06F78 /* InputManager.cpp */,
-				92E46E6D1B634FCA0035CD21 /* Main.cpp */,
-				92E46E6E1B634FCA0035CD21 /* Math.cpp */,
-				92D325031B6974CE005A86C7 /* Mesh.cpp */,
-				92E46E6F1B634FCA0035CD21 /* MoveComponent.cpp */,
-				92E46E701B634FCA0035CD21 /* Object.cpp */,
-				92E46E711B634FCA0035CD21 /* PhysWorld.cpp */,
-				92E46E721B634FCA0035CD21 /* Random.cpp */,
-				92E46E731B634FCA0035CD21 /* Renderer.cpp */,
-				92E46E741B634FCA0035CD21 /* Shader.cpp */,
-				92E46E761B634FCA0035CD21 /* SphereCollision.cpp */,
-				92E46E771B634FCA0035CD21 /* SpriteComponent.cpp */,
-				92E46E781B634FCA0035CD21 /* Texture.cpp */,
-				92E46E791B634FCA0035CD21 /* VertexArray.cpp */,
-				92E46E7A1B634FCA0035CD21 /* World.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -285,32 +330,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E46E831B634FCA0035CD21 /* Game.cpp in Sources */,
-				92E46E911B634FCA0035CD21 /* VertexArray.cpp in Sources */,
-				92E46E921B634FCA0035CD21 /* World.cpp in Sources */,
-				92E46E801B634FCA0035CD21 /* Component.cpp in Sources */,
-				92E46E8E1B634FCA0035CD21 /* SphereCollision.cpp in Sources */,
-				92E46E871B634FCA0035CD21 /* MoveComponent.cpp in Sources */,
-				92E46E891B634FCA0035CD21 /* PhysWorld.cpp in Sources */,
-				92E46E881B634FCA0035CD21 /* Object.cpp in Sources */,
-				92E46E861B634FCA0035CD21 /* Math.cpp in Sources */,
+				B4CBEE7F1DAECF7B001EADC2 /* Mesh.cpp in Sources */,
+				B4CBEE7B1DAECF7B001EADC2 /* InputComponent.cpp in Sources */,
+				B4CBEE8D1DAECF7B001EADC2 /* World.cpp in Sources */,
+				B4CBEE841DAECF7B001EADC2 /* Random.cpp in Sources */,
+				B4CBEE831DAECF7B001EADC2 /* PhysWorld.cpp in Sources */,
+				B4CBEE701DAECF7B001EADC2 /* Actor.cpp in Sources */,
+				B4CBEE771DAECF7B001EADC2 /* DrawComponent.cpp in Sources */,
+				B4CBEE781DAECF7B001EADC2 /* FrameTimer.cpp in Sources */,
+				B4CBEE791DAECF7B001EADC2 /* Game.cpp in Sources */,
+				B4CBEE8C1DAECF7B001EADC2 /* VertexArray.cpp in Sources */,
+				B4CBEE881DAECF7B001EADC2 /* Sound.cpp in Sources */,
+				B4CBEE761DAECF7B001EADC2 /* Component.cpp in Sources */,
+				B4CBEE861DAECF7B001EADC2 /* Shader.cpp in Sources */,
+				B4CBEE931DB4228A001EADC2 /* HUD.cpp in Sources */,
 				92CCAE281B75AA7A00A7791F /* Font.cpp in Sources */,
+				B4CBEE811DAECF7B001EADC2 /* MoveComponent.cpp in Sources */,
+				B4CBEE721DAECF7B001EADC2 /* AssetCache.cpp in Sources */,
+				B4CBEE871DAECF7B001EADC2 /* Ship.cpp in Sources */,
+				B4CBEE8B1DAECF7B001EADC2 /* Texture.cpp in Sources */,
+				B4CBEE891DAECF7B001EADC2 /* SphereCollision.cpp in Sources */,
+				B4CBEE851DAECF7B001EADC2 /* Renderer.cpp in Sources */,
+				B4CBEE741DAECF7B001EADC2 /* AudioComponent.cpp in Sources */,
+				B4CBEE821DAECF7B001EADC2 /* Object.cpp in Sources */,
+				B4CBEE901DAED249001EADC2 /* GameMode.cpp in Sources */,
+				B4CBEE8A1DAECF7B001EADC2 /* SpriteComponent.cpp in Sources */,
+				B4CBEE801DAECF7B001EADC2 /* MeshComponent.cpp in Sources */,
+				B4CBEE961DB42E0E001EADC2 /* CameraComponent.cpp in Sources */,
+				B4CBEE7A1DAECF7B001EADC2 /* GameTimers.cpp in Sources */,
+				B4CBEE711DAECF7B001EADC2 /* Asset.cpp in Sources */,
+				B4CBEE731DAECF7B001EADC2 /* Asteroid.cpp in Sources */,
+				B4CBEE751DAECF7B001EADC2 /* CollisionComponent.cpp in Sources */,
 				92CCAE291B75AA7A00A7791F /* FontComponent.cpp in Sources */,
-				92E46E8B1B634FCA0035CD21 /* Renderer.cpp in Sources */,
-				92E46E811B634FCA0035CD21 /* DrawComponent.cpp in Sources */,
-				92D5631F1B673D5500E689CE /* GameTimers.cpp in Sources */,
-				92E46E821B634FCA0035CD21 /* FrameTimer.cpp in Sources */,
-				92E46E8C1B634FCA0035CD21 /* Shader.cpp in Sources */,
-				92E46E7F1B634FCA0035CD21 /* CollisionComponent.cpp in Sources */,
-				92E46E851B634FCA0035CD21 /* Main.cpp in Sources */,
-				92E46E7C1B634FCA0035CD21 /* Asset.cpp in Sources */,
-				92E46E8A1B634FCA0035CD21 /* Random.cpp in Sources */,
-				92E46E8F1B634FCA0035CD21 /* SpriteComponent.cpp in Sources */,
-				92E46E7D1B634FCA0035CD21 /* AssetCache.cpp in Sources */,
-				9237DE541B6758C700D06F78 /* InputManager.cpp in Sources */,
-				92E46E7B1B634FCA0035CD21 /* Actor.cpp in Sources */,
-				92D325071B6974CE005A86C7 /* Mesh.cpp in Sources */,
-				92E46E901B634FCA0035CD21 /* Texture.cpp in Sources */,
+				B4CBEE7E1DAECF7B001EADC2 /* Math.cpp in Sources */,
+				B4CBEE7D1DAECF7B001EADC2 /* Main.cpp in Sources */,
+				B4CBEE7C1DAECF7B001EADC2 /* InputManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

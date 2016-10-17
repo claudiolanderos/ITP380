@@ -17,7 +17,6 @@ MoveComponent::MoveComponent(Actor& owner)
 
 void MoveComponent::Tick(float deltaTime)
 {
-	// TODO
 }
 
 void MoveComponent::AddToLinearAxis(float delta)
