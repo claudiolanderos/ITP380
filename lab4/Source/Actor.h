@@ -51,8 +51,8 @@ public:
 	void SetScale(float scale) { mScale = scale; ComputeWorldTransform(); }
 	float GetScale() const { return mScale; }
 
-	void SetRotation(float rotation) { mRotation = rotation; ComputeWorldTransform(); }
-	float GetRotation() const { return mRotation; }
+	void SetRotation(Quaternion& rotation) { mRotation = rotation; ComputeWorldTransform(); }
+	const Quaternion& GetRotation() const { return mRotation; }
 
 	const Matrix4& GetWorldTransform() { return mWorldTransform; }
 
@@ -81,7 +81,7 @@ private:
 	Matrix4 mWorldTransform;
 	Vector3 mPosition;
 	float mScale;
-	float mRotation;
+	Quaternion mRotation;
     bool mIsPaused;
 	bool mIsAlive;
 private:

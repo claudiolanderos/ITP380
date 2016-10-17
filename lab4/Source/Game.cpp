@@ -93,7 +93,6 @@ void Game::StartGame()
     }
     
     mShipPtr = Ship::Spawn(*this);
-    mShipPtr->SetRotation(Math::PiOver2);
 }
 
 void Game::ProcessInput()

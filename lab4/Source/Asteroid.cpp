@@ -21,7 +21,6 @@ Asteroid::Asteroid(Game& game)
     auto sprite = MeshComponent::Create(*this);
     mesh = game.GetAssetCache().Load<Mesh>("Meshes/AsteroidMesh.itpmesh2");
     sprite->SetMesh(mesh);
-    SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
     SetScale(0.1f);
     
     auto move = MoveComponent::Create(*this, Component::PreTick);

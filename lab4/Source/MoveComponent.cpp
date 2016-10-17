@@ -18,9 +18,11 @@ MoveComponent::MoveComponent(Actor& owner)
 void MoveComponent::Tick(float deltaTime)
 {
     if(!Math::IsZero(mAngularAxis)){
-        float rot = mOwner.GetRotation();
-        rot += mAngularSpeed * mAngularAxis * deltaTime;
-        mOwner.SetRotation(rot);
+        Quaternion rotation = mOwner.GetRotation();
+        float incremental = mAngularSpeed * mAngularAxis * deltaTime;
+        Quaternion incrementalQuaternion(mOwner.GetWorldTransform().GetZAxis(), incremental);
+        rotation = Concatenate(rotation, incrementalQuaternion);
+        mOwner.SetRotation(rotation);
     }
     if (!Math::IsZero(mLinearAxis))
     {

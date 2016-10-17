@@ -25,7 +25,6 @@ Ship::Ship(Game& game)
     mMeshComponent = MeshComponent::Create(*this);
     mMesh = game.GetAssetCache().Load<Mesh>("Meshes/PlayerShip.itpmesh2");
     mMeshComponent->SetMesh(mMesh);
-    SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
 
     //Load sound
     mSoundCue = mAudioComponent->PlaySound(game.GetAssetCache().Load<Sound>("Sounds/ShipEngine.wav"), true);
@@ -76,5 +75,4 @@ void Ship::OnRespawnShip()
     SetIsPaused(false);
     mMeshComponent->SetIsVisible(true);
     SetPosition(Vector3::Zero);
-    SetRotation(Random::GetFloatRange(0.0f, Math::TwoPi));
 }

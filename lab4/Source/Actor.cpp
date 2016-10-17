@@ -7,7 +7,7 @@ Actor::Actor(Game& game)
 	:mGame(game)
 	,mParent(nullptr)
 	,mScale(1.0f)
-	,mRotation(0.0f)
+	,mRotation()
 	,mIsAlive(true)
     ,mIsPaused(false)
 {
@@ -101,7 +101,7 @@ void Actor::ComputeWorldTransform()
 {
 	// TODO
     Matrix4 scaleMat = Matrix4::CreateScale(this->GetScale());
-    Matrix4 rotationMat = Matrix4::CreateRotationZ(this->GetRotation());
+    Matrix4 rotationMat = Matrix4::CreateFromQuaternion(this->GetRotation());
     Matrix4 translationMat = Matrix4::CreateTranslation(this->GetPosition());
     mWorldTransform = scaleMat*rotationMat*translationMat;
     
