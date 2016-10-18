@@ -34,7 +34,7 @@ private:
     ActorPtr mTimeChild;
     ActorPtr mGameOverChild;
     
-    int mScore;
+    int mScore = 0;
     bool mGameOver = false;
     TimerHandle mHandle;
 };

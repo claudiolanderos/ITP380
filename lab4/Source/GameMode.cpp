@@ -52,7 +52,7 @@ void GameMode::SpawnCheckpoint()
     maxVec.y += 1000.0f + range;
     maxVec.z += 1000.0f + range;
     
-    range += 10;
+    range += 50;
     
     Vector3 position = Random::GetVector(minVec, maxVec);
     checkpoint->SetPosition(position);
@@ -62,7 +62,7 @@ void GameMode::SpawnCheckpoint()
 void GameMode::CollectCheckPoint()
 {
     mGame.GetGameTimers().AddTime(timeHandle, 5.0f);
-    mHUD->AddScore(1000);
+    mHUD->AddScore(100);
     mAudioComponent->PlaySound(mGame.GetAssetCache().Load<Sound>("Sounds/Checkpoint.wav"), false);
     SpawnCheckpoint();
 }
