@@ -8,6 +8,8 @@
 
 #pragma once
 #include "Actor.h"
+#include "FontComponent.h"
+#include "GameTimers.h"
 
 class HUD : public Actor
 {
@@ -15,7 +17,25 @@ class HUD : public Actor
     
 public:
     HUD(Game& game);
-private:
     
+    void GameOver() { mGameOver = true; }
+    
+    void AddScore(int score) { mScore += score; }
+    
+    void SetTime(TimerHandle handle) { mHandle = handle; }
+    
+    void Tick(float deltaTime) override;
+private:
+    FontComponentPtr mScoreFont;
+    FontComponentPtr mTimeFont;
+    FontComponentPtr mGameOverFont;
+    
+    ActorPtr mScoreChild;
+    ActorPtr mTimeChild;
+    ActorPtr mGameOverChild;
+    
+    int mScore;
+    bool mGameOver = false;
+    TimerHandle mHandle;
 };
 DECL_PTR(HUD);

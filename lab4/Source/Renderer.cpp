@@ -87,7 +87,6 @@ bool Renderer::Init(int width, int height)
 
 void Renderer::RenderFrame()
 {
-	// TODO
     Clear();
     DrawComponents();
     Present();
