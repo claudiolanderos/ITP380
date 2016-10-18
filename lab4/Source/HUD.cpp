@@ -21,7 +21,9 @@ HUD::HUD(Game& game)
     mScoreFont = FontComponent::Create(*mScoreChild);
     mTimeFont = FontComponent::Create(*mTimeChild);
     mGameOverFont = FontComponent::Create(*mGameOverChild);
-    
+    mScoreFont->SetAlignment(FontComponent::AlignCenter);
+    mTimeFont->SetAlignment(FontComponent::AlignCenter);
+    mGameOverFont->SetAlignment(FontComponent::AlignCenter);
     auto font = game.GetAssetCache().Load<Font>("Fonts/Carlito-Regular.ttf");
     mScoreFont->SetFont(font);
     mTimeFont->SetFont(font);
