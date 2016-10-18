@@ -11,6 +11,8 @@
 		92CCAE291B75AA7A00A7791F /* FontComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CCAE271B75AA7A00A7791F /* FontComponent.cpp */; };
 		92D324FD1B697428005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FC1B697428005A86C7 /* CoreFoundation.framework */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		B45E6D741DB594E500BEBE28 /* Checkpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B45E6D721DB594E500BEBE28 /* Checkpoint.cpp */; };
+		B45E6D771DB5B96C00BEBE28 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B45E6D751DB5B96C00BEBE28 /* Arrow.cpp */; };
 		B4CBEE701DAECF7B001EADC2 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE521DAECF7B001EADC2 /* Actor.cpp */; };
 		B4CBEE711DAECF7B001EADC2 /* Asset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE531DAECF7B001EADC2 /* Asset.cpp */; };
 		B4CBEE721DAECF7B001EADC2 /* AssetCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE541DAECF7B001EADC2 /* AssetCache.cpp */; };
@@ -58,6 +60,10 @@
 		92D324FC1B697428005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B45E6D721DB594E500BEBE28 /* Checkpoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Checkpoint.cpp; sourceTree = "<group>"; };
+		B45E6D731DB594E500BEBE28 /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
+		B45E6D751DB5B96C00BEBE28 /* Arrow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Arrow.cpp; sourceTree = "<group>"; };
+		B45E6D761DB5B96C00BEBE28 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
 		B4CBEE331DAECF6E001EADC2 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
 		B4CBEE341DAECF6E001EADC2 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
 		B4CBEE351DAECF6E001EADC2 /* AssetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCache.h; sourceTree = "<group>"; };
@@ -176,18 +182,23 @@
 			isa = PBXGroup;
 			children = (
 				B4CBEE331DAECF6E001EADC2 /* Actor.h */,
-				B4CBEE8F1DAED249001EADC2 /* GameMode.h */,
 				B4CBEE341DAECF6E001EADC2 /* Asset.h */,
 				B4CBEE351DAECF6E001EADC2 /* AssetCache.h */,
 				B4CBEE361DAECF6E001EADC2 /* Asteroid.h */,
 				B4CBEE371DAECF6E001EADC2 /* AudioComponent.h */,
+				B4CBEE951DB42E0E001EADC2 /* CameraComponent.h */,
+				B45E6D731DB594E500BEBE28 /* Checkpoint.h */,
 				B4CBEE381DAECF6E001EADC2 /* CollisionComponent.h */,
 				B4CBEE391DAECF6E001EADC2 /* Component.h */,
 				B4CBEE3A1DAECF6E001EADC2 /* Delegate.h */,
 				B4CBEE3B1DAECF6E001EADC2 /* DrawComponent.h */,
+				92CCAE241B75AA6600A7791F /* Font.h */,
+				92CCAE251B75AA6600A7791F /* FontComponent.h */,
 				B4CBEE3C1DAECF6E001EADC2 /* FrameTimer.h */,
 				B4CBEE3D1DAECF6E001EADC2 /* Game.h */,
+				B4CBEE8F1DAED249001EADC2 /* GameMode.h */,
 				B4CBEE3E1DAECF6E001EADC2 /* GameTimers.h */,
+				B4CBEE921DB4228A001EADC2 /* HUD.h */,
 				B4CBEE3F1DAECF6E001EADC2 /* InputComponent.h */,
 				B4CBEE401DAECF6E001EADC2 /* InputManager.h */,
 				B4CBEE411DAECF6E001EADC2 /* Math.h */,
@@ -207,10 +218,7 @@
 				B4CBEE4F1DAECF6E001EADC2 /* Texture.h */,
 				B4CBEE501DAECF6E001EADC2 /* VertexArray.h */,
 				B4CBEE511DAECF6E001EADC2 /* World.h */,
-				92CCAE241B75AA6600A7791F /* Font.h */,
-				92CCAE251B75AA6600A7791F /* FontComponent.h */,
-				B4CBEE921DB4228A001EADC2 /* HUD.h */,
-				B4CBEE951DB42E0E001EADC2 /* CameraComponent.h */,
+				B45E6D761DB5B96C00BEBE28 /* Arrow.h */,
 			);
 			name = Headers;
 			path = Source;
@@ -219,20 +227,24 @@
 		92E46E621B634F9D0035CD21 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B4CBEE941DB42E0E001EADC2 /* CameraComponent.cpp */,
-				B4CBEE911DB4228A001EADC2 /* HUD.cpp */,
-				B4CBEE8E1DAED249001EADC2 /* GameMode.cpp */,
+				B45E6D751DB5B96C00BEBE28 /* Arrow.cpp */,
 				B4CBEE521DAECF7B001EADC2 /* Actor.cpp */,
 				B4CBEE531DAECF7B001EADC2 /* Asset.cpp */,
 				B4CBEE541DAECF7B001EADC2 /* AssetCache.cpp */,
 				B4CBEE551DAECF7B001EADC2 /* Asteroid.cpp */,
 				B4CBEE561DAECF7B001EADC2 /* AudioComponent.cpp */,
+				B4CBEE941DB42E0E001EADC2 /* CameraComponent.cpp */,
+				B45E6D721DB594E500BEBE28 /* Checkpoint.cpp */,
 				B4CBEE571DAECF7B001EADC2 /* CollisionComponent.cpp */,
 				B4CBEE581DAECF7B001EADC2 /* Component.cpp */,
 				B4CBEE591DAECF7B001EADC2 /* DrawComponent.cpp */,
+				92CCAE261B75AA7A00A7791F /* Font.cpp */,
+				92CCAE271B75AA7A00A7791F /* FontComponent.cpp */,
 				B4CBEE5A1DAECF7B001EADC2 /* FrameTimer.cpp */,
 				B4CBEE5B1DAECF7B001EADC2 /* Game.cpp */,
+				B4CBEE8E1DAED249001EADC2 /* GameMode.cpp */,
 				B4CBEE5C1DAECF7B001EADC2 /* GameTimers.cpp */,
+				B4CBEE911DB4228A001EADC2 /* HUD.cpp */,
 				B4CBEE5D1DAECF7B001EADC2 /* InputComponent.cpp */,
 				B4CBEE5E1DAECF7B001EADC2 /* InputManager.cpp */,
 				B4CBEE5F1DAECF7B001EADC2 /* Main.cpp */,
@@ -252,8 +264,6 @@
 				B4CBEE6D1DAECF7B001EADC2 /* Texture.cpp */,
 				B4CBEE6E1DAECF7B001EADC2 /* VertexArray.cpp */,
 				B4CBEE6F1DAECF7B001EADC2 /* World.cpp */,
-				92CCAE261B75AA7A00A7791F /* Font.cpp */,
-				92CCAE271B75AA7A00A7791F /* FontComponent.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 				B4CBEE721DAECF7B001EADC2 /* AssetCache.cpp in Sources */,
 				B4CBEE871DAECF7B001EADC2 /* Ship.cpp in Sources */,
 				B4CBEE8B1DAECF7B001EADC2 /* Texture.cpp in Sources */,
+				B45E6D741DB594E500BEBE28 /* Checkpoint.cpp in Sources */,
 				B4CBEE891DAECF7B001EADC2 /* SphereCollision.cpp in Sources */,
 				B4CBEE851DAECF7B001EADC2 /* Renderer.cpp in Sources */,
 				B4CBEE741DAECF7B001EADC2 /* AudioComponent.cpp in Sources */,
@@ -364,6 +375,7 @@
 				92CCAE291B75AA7A00A7791F /* FontComponent.cpp in Sources */,
 				B4CBEE7E1DAECF7B001EADC2 /* Math.cpp in Sources */,
 				B4CBEE7D1DAECF7B001EADC2 /* Main.cpp in Sources */,
+				B45E6D771DB5B96C00BEBE28 /* Arrow.cpp in Sources */,
 				B4CBEE7C1DAECF7B001EADC2 /* InputManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

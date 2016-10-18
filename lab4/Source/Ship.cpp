@@ -16,6 +16,7 @@
 #include "MeshComponent.h"
 #include "Mesh.h"
 #include "CameraComponent.h"
+#include "Checkpoint.h"
 
 IMPL_ACTOR(Ship, Actor);
 
@@ -68,6 +69,11 @@ void Ship::BeginPlay()
 void Ship::BeginTouch(Actor& other)
 {
     Super::BeginTouch(other);
+    if(this->IsPaused() == false && IsA<Checkpoint>(other))
+    {
+        other.SetIsAlive(false);
+        mGame.GetGameMode()->CollectCheckPoint();
+    }
 }
 
 void Ship::OnRespawnShip()
@@ -75,4 +81,10 @@ void Ship::OnRespawnShip()
     SetIsPaused(false);
     mMeshComponent->SetIsVisible(true);
     SetPosition(Vector3::Zero);
+}
+
+void Ship::Recenter()
+{
+    SetRotation(Quaternion::Identity);
+    mCameraComponent->SnapToIdealPosition();
 }

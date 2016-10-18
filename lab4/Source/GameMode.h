@@ -1,5 +1,8 @@
 #pragma once
 #include "Actor.h"
+#include "Ship.h"
+#include "AudioComponent.h"
+#include "Arrow.h"
 
 class GameMode : public Actor
 {
@@ -7,8 +10,17 @@ class GameMode : public Actor
 public:
 	GameMode(Game& game);
 
-private:
+    ~GameMode();
     
+    void StartGame();
+    
+    void CollectCheckPoint();
+private:
+    void SpawnCheckpoint();
+    
+    ShipPtr mShip;
+    AudioComponentPtr mAudioComponent;
+    ArrowPtr    mArrow;
 };
 
 DECL_PTR(GameMode);

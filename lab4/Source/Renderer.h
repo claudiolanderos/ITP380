@@ -34,6 +34,7 @@ public:
     
     void UpdateViewMatrix(Matrix4 view);
     
+    Vector3 Unproject(const Vector3& screenPoint) const;
 private:
 	void Clear();
 	void DrawComponents();

@@ -11,6 +11,7 @@
 #include "Ship.h"
 #include "InputManager.h"
 #include "GameTimers.h"
+#include "GameMode.h"
 
 class Game
 {
@@ -27,6 +28,7 @@ public:
 	PhysWorld& GetPhysWorld() { return mPhysWorld; }
     InputManager& GetInput() { return mInput; }
     GameTimerManager& GetGameTimers() { return mGameTimerManager; }
+    GameModePtr GetGameMode() { return mGameMode; }
     
 private:
 	void StartGame();
@@ -48,9 +50,9 @@ private:
 
 	bool mShouldQuit;
     
-    ShipPtr mShipPtr;
-    
     InputManager mInput;
     
     GameTimerManager mGameTimerManager;
+    
+    GameModePtr mGameMode;
 };

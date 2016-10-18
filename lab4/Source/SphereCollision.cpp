@@ -27,7 +27,6 @@ void SphereCollision::Tick(float deltaTime)
 
 bool SphereCollision::Intersects(CollisionComponentPtr other)
 {
-	// TODO
     if (IsA<SphereCollision>(other))
     {
         return IntersectsSphere(Cast<SphereCollision>(other));

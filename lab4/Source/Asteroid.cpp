@@ -10,7 +10,6 @@
 #include "Game.h"
 #include "MeshComponent.h"
 #include "Random.h"
-#include "MoveComponent.h"
 #include "SphereCollision.h"
 
 IMPL_ACTOR(Asteroid, Actor);
@@ -22,8 +21,4 @@ Asteroid::Asteroid(Game& game)
     mesh = game.GetAssetCache().Load<Mesh>("Meshes/AsteroidMesh.itpmesh2");
     sprite->SetMesh(mesh);
     SetScale(0.1f);
-    
-    auto move = MoveComponent::Create(*this, Component::PreTick);
-    move->SetLinearSpeed(150.0f);
-    move->SetLinearAxis(1.0f);
 }

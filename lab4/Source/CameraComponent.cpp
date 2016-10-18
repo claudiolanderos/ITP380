@@ -35,11 +35,11 @@ void CameraComponent::Tick(float deltaTime)
     Vector3 vTargetPosition = vShipPosition + vShipForward*150.0f;
     Vector3 vShipUp = mOwner.GetWorldTransform().GetZAxis();
     vShipUp.Normalize();
-    Vector3 vCameraForward = vTargetPosition - vIdealPosition;
+    Vector3 vCameraForward = vTargetPosition - mActualPosition;
     vCameraForward.Normalize();
-    Vector3 vCameraLeft = vShipUp * vCameraForward;
+    Vector3 vCameraLeft = Cross(vShipUp, vCameraForward);
     vCameraLeft.Normalize();
-    Vector3 vCameraUp = vCameraForward * vCameraLeft;
+    Vector3 vCameraUp = Cross(vCameraForward, vCameraLeft);
     vCameraUp.Normalize();
     Matrix4 cameraMatrix = Matrix4::CreateLookAt(mActualPosition, vTargetPosition, vCameraUp);
     mOwner.GetGame().GetRenderer().UpdateViewMatrix(cameraMatrix);
@@ -52,7 +52,7 @@ Vector3 CameraComponent::GetIdealPosition()
     vShipForward.Normalize();
     Vector3 vShipUp = mOwner.GetWorldTransform().GetZAxis();
     vShipUp.Normalize();
-    Vector3 vCameraPosition = vShipPosition - vShipForward*Math::Lerp(300.0f, 350.0f, mMoveComponent->GetLinearAxis()) + vShipUp*100.0f;
+    Vector3 vCameraPosition = vShipPosition - vShipForward*Math::Lerp(200.0f, 250.0f, mMoveComponent->GetLinearAxis()) + vShipUp*100.0f;
     
     return vCameraPosition;
 }

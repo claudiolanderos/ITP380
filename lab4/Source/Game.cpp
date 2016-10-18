@@ -17,7 +17,6 @@ Game::Game()
 
 Game::~Game()
 {
-    mShipPtr = nullptr;
 	mAssetCache.Clear();
 	mWorld.RemoveAllActors();
     Mix_CloseAudio();
@@ -83,16 +82,8 @@ void Game::Quit()
 
 void Game::StartGame()
 {
-    const int NUM_ASTEROIDS = 500;
-    Vector3 minVec(-5000.0f, -5000.0f, -5000.0f);
-    Vector3 maxVec(5000.0f, 5000.0f, 5000.0f);
-    for (int i = 0; i < NUM_ASTEROIDS; i++)
-    {
-        auto ast = Asteroid::Spawn(*this);
-        ast->SetPosition(Random::GetVector(minVec, maxVec));
-    }
-    
-    mShipPtr = Ship::Spawn(*this);
+    mGameMode = GameMode::Spawn(*this);
+    mGameMode->StartGame();
 }
 
 void Game::ProcessInput()
@@ -153,4 +144,5 @@ void Game::AddInputMappings()
     mInput.AddAxisMapping("Move", 'p', SDLK_SEMICOLON);
     mInput.AddAxisMapping("Yaw", 'a', 'd');
     mInput.AddAxisMapping("Pitch", 'w', 's');
+    mInput.AddActionMapping("Recenter", 'r');
 }

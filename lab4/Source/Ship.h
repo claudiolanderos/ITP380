@@ -31,6 +31,8 @@ public:
     void BeginPlay() override;
     
     void BeginTouch(Actor& other) override;
+    
+    void Recenter();
 private:
     InputComponentPtr mInputComponent;
     MeshComponentPtr mMeshComponent;
