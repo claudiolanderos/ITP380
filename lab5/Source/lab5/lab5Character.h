@@ -20,6 +20,8 @@ class Alab5Character : public ACharacter
 public:
 	Alab5Character();
 
+    void BeginPlay() override;
+    
 	/** Returns TopDownCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	/** Returns CameraBoom subobject **/

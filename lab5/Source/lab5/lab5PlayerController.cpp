@@ -14,10 +14,12 @@ void Alab5PlayerController::PlayerTick(float DeltaTime)
 {
 	Super::PlayerTick(DeltaTime);
 
+    UpdateMouseLook();
+    
 	// keep updating the destination every tick while desired
 	if (bMoveToMouseCursor)
 	{
-		MoveToMouseCursor();
+		//MoveToMouseCursor();
 	}
 }
 
@@ -28,7 +30,9 @@ void Alab5PlayerController::SetupInputComponent()
 
 	InputComponent->BindAction("SetDestination", IE_Pressed, this, &Alab5PlayerController::OnSetDestinationPressed);
 	InputComponent->BindAction("SetDestination", IE_Released, this, &Alab5PlayerController::OnSetDestinationReleased);
-
+    InputComponent->BindAxis("MoveForward", this, &Alab5PlayerController::MoveForward);
+    InputComponent->BindAxis("MoveRight", this, &Alab5PlayerController::MoveRight);
+    
 	// support touch devices 
 	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &Alab5PlayerController::MoveToTouchLocation);
 	InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &Alab5PlayerController::MoveToTouchLocation);
@@ -87,4 +91,48 @@ void Alab5PlayerController::OnSetDestinationReleased()
 {
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
+}
+
+void Alab5PlayerController::MoveForward(float Value)
+{
+    if (Value != 0.0f)
+    {
+        APawn* pawn = GetPawn();
+        if (pawn != nullptr)
+        {
+            pawn->AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+        }
+    }
+}
+
+void Alab5PlayerController::MoveRight(float Value)
+{
+    if (Value != 0.0f)
+    {
+        APawn* pawn = GetPawn();
+        if (pawn != nullptr)
+        {
+            pawn->AddMovementInput(FVector(0.0f, 1.0f, 0.0f), Value);
+        }
+    }
+}
+
+void Alab5PlayerController::UpdateMouseLook()
+{
+    APawn* pawn = GetPawn();
+    if(pawn != nullptr)
+    {
+        // Trace to see what is under the mouse cursor
+        FHitResult Hit;
+        GetHitResultUnderCursor(ECC_Visibility, false, Hit);
+        
+        if (Hit.bBlockingHit)
+        {
+            FVector vector = Hit.ImpactPoint - pawn->GetActorLocation();
+            vector.Z = 0.0f;
+            vector.Normalize();
+            FRotator rotator = vector.Rotation();
+            pawn->SetActorRotation(rotator);
+        }
+    }
 }
