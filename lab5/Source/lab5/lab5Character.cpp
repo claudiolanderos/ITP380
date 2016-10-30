@@ -60,6 +60,7 @@ void Alab5Character::BeginPlay()
                 MyWeapon->AttachToComponent(GetMesh(),
                                             FAttachmentTransformRules::KeepRelativeTransform,
                                             TEXT("WeaponPoint"));
+                MyWeapon->SetWeaponOwner(this);
             }
         }
     }

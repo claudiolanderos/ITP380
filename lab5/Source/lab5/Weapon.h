@@ -27,6 +27,10 @@ public:
     
     UAudioComponent* PlayWeaponSound(class USoundCue* Sound);
     
+    void SetWeaponOwner(class Alab5Character* owner) { MyOwner = owner; }
+    class Alab5Character* GetWeaponOwner() { return MyOwner; }
+    
+    void WeaponTrace();
 protected:
     UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Weapon)
     USkeletalMeshComponent* WeaponMesh;
@@ -45,4 +49,20 @@ protected:
     
     UPROPERTY(Transient)
     class UParticleSystemComponent* MuzzleSC;
+    
+    class Alab5Character* MyOwner;
+    
+    UPROPERTY(EditAnywhere)
+    float FireRate;
+    
+    UPROPERTY(EditAnywhere)
+    float WeaponRange;
+    
+    UPROPERTY(EditDefaultsOnly, Category = Effects)
+    UParticleSystem* ImpactFX;
+    
+    UPROPERTY(Transient)
+    class UParticleSystemComponent* ImpactSC;
+    
+    FTimerHandle WeaponTimer;
 };
