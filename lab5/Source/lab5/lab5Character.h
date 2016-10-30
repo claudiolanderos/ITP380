@@ -26,5 +26,15 @@ public:
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+    
+    void OnStartFire();
+    void OnStopFire();
+    
+protected:
+    UPROPERTY(EditAnywhere, Category = Weapon)
+    TSubclassOf<class AWeapon> WeaponClass;
+    
+private:
+    class AWeapon* MyWeapon;
 };
 

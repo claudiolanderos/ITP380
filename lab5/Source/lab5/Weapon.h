@@ -20,15 +20,29 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-    WeaponMesh* GetWeaponMesh();
+    USkeletalMeshComponent* GetWeaponMesh();
+    
+    void OnStartFire();
+    void OnStopFire();
+    
+    UAudioComponent* PlayWeaponSound(class USoundCue* Sound);
     
 protected:
     UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Weapon)
     USkeletalMeshComponent* WeaponMesh;
-	
-    UPROPERTY(EditAnywhere, Category = Weapon)
-    TSubclassOf<class AWeapon> WeaponClass;
     
-private:
-    class AWeapon* MyWeapon;
+    UPROPERTY(EditDefaultsOnly, Category = Sound)
+    class USoundCue* FireLoopSound;
+    
+    UPROPERTY(EditDefaultsOnly, Category = Sound)
+    class USoundCue* FireFinishSound;
+    
+    UPROPERTY(Transient)
+    class UAudioComponent* FireAC;
+    
+    UPROPERTY(EditDefaultsOnly, Category = Effects)
+    class UParticleSystem* MuzzleFX;
+    
+    UPROPERTY(Transient)
+    class UParticleSystemComponent* MuzzleSC;
 };

@@ -37,6 +37,9 @@ protected:
     void MoveRight(float Value);
     
     void UpdateMouseLook();
+    
+    void OnStartFire();
+    void OnStopFire();
 };
 
 

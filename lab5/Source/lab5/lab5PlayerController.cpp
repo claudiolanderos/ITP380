@@ -3,6 +3,7 @@
 #include "lab5.h"
 #include "lab5PlayerController.h"
 #include "AI/Navigation/NavigationSystem.h"
+#include "lab5Character.h"
 
 Alab5PlayerController::Alab5PlayerController()
 {
@@ -30,8 +31,11 @@ void Alab5PlayerController::SetupInputComponent()
 
 	InputComponent->BindAction("SetDestination", IE_Pressed, this, &Alab5PlayerController::OnSetDestinationPressed);
 	InputComponent->BindAction("SetDestination", IE_Released, this, &Alab5PlayerController::OnSetDestinationReleased);
+    InputComponent->BindAction("Fire", IE_Pressed, this, &Alab5PlayerController::OnStartFire);
+    InputComponent->BindAction("Fire", IE_Released, this, &Alab5PlayerController::OnStopFire);
     InputComponent->BindAxis("MoveForward", this, &Alab5PlayerController::MoveForward);
     InputComponent->BindAxis("MoveRight", this, &Alab5PlayerController::MoveRight);
+
     
 	// support touch devices 
 	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &Alab5PlayerController::MoveToTouchLocation);
@@ -135,4 +139,14 @@ void Alab5PlayerController::UpdateMouseLook()
             pawn->SetActorRotation(rotator);
         }
     }
+}
+
+void Alab5PlayerController::OnStartFire()
+{
+    Cast<Alab5Character>(GetPawn())->OnStartFire();
+}
+
+void Alab5PlayerController::OnStopFire()
+{
+    Cast<Alab5Character>(GetPawn())->OnStopFire();
 }

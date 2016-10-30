@@ -2,7 +2,8 @@
 
 #include "lab5.h"
 #include "Weapon.h"
-
+#include "Sound/SoundCue.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -12,8 +13,6 @@ AWeapon::AWeapon()
 
     WeaponMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponMesh"));
     RootComponent = WeaponMesh;
-    
-    MyWeapon = nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -27,6 +26,33 @@ void AWeapon::BeginPlay()
 void AWeapon::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
-
 }
 
+void AWeapon::OnStartFire()
+{
+    FireAC = PlayWeaponSound(FireLoopSound);
+    MuzzleSC = UGameplayStatics::SpawnEmitterAttached(MuzzleFX, WeaponMesh, TEXT("MuzzleFlashSocket"));
+}
+
+void AWeapon::OnStopFire()
+{
+    if(MuzzleSC != nullptr)
+    {
+        MuzzleSC->DeactivateSystem();
+    }
+    if(FireAC != nullptr)
+    {
+        FireAC->Stop();
+    }
+    FireAC = PlayWeaponSound(FireFinishSound);
+}
+
+UAudioComponent* AWeapon::PlayWeaponSound(USoundCue* Sound)
+{
+    UAudioComponent* AC = NULL;
+    if (Sound)
+    {
+        AC = UGameplayStatics::SpawnSoundAttached(Sound, RootComponent);
+    }
+    return AC;
+}

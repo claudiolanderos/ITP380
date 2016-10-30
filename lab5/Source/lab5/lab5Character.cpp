@@ -33,6 +33,7 @@ Alab5Character::Alab5Character()
 	TopDownCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	TopDownCameraComponent->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+    MyWeapon = nullptr;
 }
 
 void Alab5Character::BeginPlay()
@@ -61,5 +62,21 @@ void Alab5Character::BeginPlay()
                                             TEXT("WeaponPoint"));
             }
         }
+    }
+}
+
+void Alab5Character::OnStartFire()
+{
+    if(MyWeapon != nullptr)
+    {
+        MyWeapon->OnStartFire();
+    }
+}
+
+void Alab5Character::OnStopFire()
+{
+    if(MyWeapon != nullptr)
+    {
+        MyWeapon->OnStopFire();
     }
 }
