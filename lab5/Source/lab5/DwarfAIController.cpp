@@ -37,9 +37,13 @@ void ADwarfAIController::Tick(float DeltaSeconds)
 
 void ADwarfAIController::ChasePlayer()
 {
-    Cast<ADwarfCharacter>(GetPawn())->StopAttack();
-    MoveToActor(mPlayer);
-    mState = Chase;
+    ADwarfCharacter* dwarf = Cast<ADwarfCharacter>(GetPawn());
+    if(dwarf != nullptr)
+    {
+        dwarf->StopAttack();
+        MoveToActor(mPlayer);
+        mState = Chase;
+    }
 }
 
 void ADwarfAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result)
@@ -52,6 +56,12 @@ void ADwarfAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFoll
     else
     {
         mState = Chase;
-        (Cast<ADwarfCharacter>(GetPawn()))->StopAttack();
+        ADwarfCharacter* dwarf = Cast<ADwarfCharacter>(GetPawn());
+        if(dwarf != nullptr)
+        {
+            dwarf->StopAttack();
+            MoveToActor(mPlayer);
+            mState = Chase;
+        }
     }
 }

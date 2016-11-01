@@ -46,7 +46,10 @@ void ADwarfCharacter::Attack()
 }
 void ADwarfCharacter::StopAttack()
 {
-    StopAnimMontage(AttackAnim);
+    if(AttackAnim != nullptr)
+    {
+        StopAnimMontage(AttackAnim);
+    }
     GetWorldTimerManager().ClearTimer(AttackTimer);
 }
 
