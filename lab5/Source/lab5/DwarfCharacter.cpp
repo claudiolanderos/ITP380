@@ -34,3 +34,12 @@ void ADwarfCharacter::SetupPlayerInputComponent(class UInputComponent* InputComp
 
 }
 
+void ADwarfCharacter::StartAttack()
+{
+    PlayAnimMontage(AttackAnim);
+}
+
+void ADwarfCharacter::StopAttack()
+{
+    StopAnimMontage(AttackAnim);
+}

@@ -2,7 +2,7 @@
 
 #include "lab5.h"
 #include "DwarfAIController.h"
-
+#include "DwarfCharacter.h"
 
 void ADwarfAIController::BeginPlay()
 {
@@ -24,11 +24,15 @@ void ADwarfAIController::Tick(float DeltaSeconds)
         {
             ChasePlayer();
         }
+        else {
+        }
     }
+    
 }
 
 void ADwarfAIController::ChasePlayer()
 {
+    Cast<ADwarfCharacter>(GetPawn())->StopAttack();
     MoveToActor(mPlayer);
     mState = Chase;
 }
@@ -38,9 +42,11 @@ void ADwarfAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFoll
     if(Result.IsSuccess())
     {
         mState = Attack;
+        (Cast<ADwarfCharacter>(GetPawn()))->StartAttack();
     }
     else
     {
         mState = Chase;
+        (Cast<ADwarfCharacter>(GetPawn()))->StopAttack();
     }
 }
