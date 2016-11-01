@@ -17,7 +17,7 @@ void ASpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
     FTimerHandle handle;
-    GetWorldTimerManager().SetTimer(Handle, this, &ASpawnManager::OnSpawnTimer, SpawnTime, true);
+    GetWorldTimerManager().SetTimer(handle, this, &ASpawnManager::OnSpawnTimer, SpawnTime, true);
 }
 
 // Called every frame
@@ -38,7 +38,7 @@ void ASpawnManager::OnSpawnTimer()
         FRotator rotation = target->GetActorRotation();
         
         // Spawn an ACharacter of subclass CharacterClass, at specified position and rotation
-        ACharacter* Char = GetWorld()->SpawnActor<ACharacter>(CharacterClass, pos, rot);
+        ACharacter* Char = GetWorld()->SpawnActor<ACharacter>(CharacterClass, location, rotation);
         if (Char)
         { // Spawn the AI controller for the character
             Char->SpawnDefaultController();
