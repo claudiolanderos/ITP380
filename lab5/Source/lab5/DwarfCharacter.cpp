@@ -36,12 +36,18 @@ void ADwarfCharacter::SetupPlayerInputComponent(class UInputComponent* InputComp
 
 void ADwarfCharacter::StartAttack()
 {
-    PlayAnimMontage(AttackAnim);
+    float time = PlayAnimMontage(AttackAnim);
+    GetWorldTimerManager().SetTimer(AttackTimer, this, &ADwarfCharacter::Attack, time, true);
 }
 
+void ADwarfCharacter::Attack()
+{
+    UGameplayStatics::GetPlayerPawn(this, 0)->TakeDamage(MDamage, FDamageEvent(), GetInstigatorController(), this);
+}
 void ADwarfCharacter::StopAttack()
 {
     StopAnimMontage(AttackAnim);
+    GetWorldTimerManager().ClearTimer(AttackTimer);
 }
 
 float ADwarfCharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)

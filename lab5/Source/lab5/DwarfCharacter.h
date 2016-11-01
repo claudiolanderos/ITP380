@@ -42,4 +42,7 @@ public:
     
 private:
     void Finish();
+    void Attack();
+    
+    FTimerHandle AttackTimer;
 };

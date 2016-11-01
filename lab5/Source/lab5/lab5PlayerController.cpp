@@ -126,6 +126,10 @@ void Alab5PlayerController::UpdateMouseLook()
     APawn* pawn = GetPawn();
     if(pawn != nullptr)
     {
+        if(IsLookInputIgnored())
+        {
+            return;
+        }
         // Trace to see what is under the mouse cursor
         FHitResult Hit;
         GetHitResultUnderCursor(ECC_Visibility, false, Hit);
@@ -143,10 +147,22 @@ void Alab5PlayerController::UpdateMouseLook()
 
 void Alab5PlayerController::OnStartFire()
 {
-    Cast<Alab5Character>(GetPawn())->OnStartFire();
+    Alab5Character* player = Cast<Alab5Character>(GetPawn());
+    
+    if(player == nullptr || player->IsDead())
+    {
+        return;
+    }
+    player->OnStartFire();
 }
 
 void Alab5PlayerController::OnStopFire()
 {
-    Cast<Alab5Character>(GetPawn())->OnStopFire();
+    Alab5Character* player = Cast<Alab5Character>(GetPawn());
+    
+    if(player == nullptr || player->IsDead())
+    {
+        return;
+    }
+    player->OnStopFire();
 }

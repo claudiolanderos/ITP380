@@ -81,3 +81,41 @@ void Alab5Character::OnStopFire()
         MyWeapon->OnStopFire();
     }
 }
+
+float Alab5Character::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+    float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+    if (ActualDamage > 0.0f)
+    {
+        Health -= ActualDamage;
+        if (Health <= 0.0f)
+        { // We're dead, don't allow further damage
+            bCanBeDamaged = false;
+            float time = PlayAnimMontage(DeathAnim);
+            time -= 0.25f;
+            APlayerController* PC = Cast<APlayerController>(GetController());
+            if (PC)
+            {
+                PC->SetCinematicMode(true, true, true);
+            }
+            FTimerHandle handle;
+            GetWorldTimerManager().SetTimer(handle, this, &Alab5Character::Finish, time, false);
+            OnStopFire();
+        }
+    }
+    return ActualDamage;
+}
+
+bool Alab5Character::IsDead()
+{
+    if(Health <= 0.0f)
+    {
+        return true;
+    }
+    return false;
+}
+void Alab5Character::Finish()
+{
+    GetMesh()->Deactivate();
+}
+

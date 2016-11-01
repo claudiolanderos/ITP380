@@ -22,6 +22,8 @@ public:
 
     void BeginPlay() override;
     
+    float TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
 	/** Returns TopDownCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	/** Returns CameraBoom subobject **/
@@ -30,13 +32,22 @@ public:
     void OnStartFire();
     void OnStopFire();
     
+    bool IsDead();
+    
 protected:
     UPROPERTY(EditAnywhere, Category = Weapon)
     TSubclassOf<class AWeapon> WeaponClass;
     
     UPROPERTY(EditAnywhere, Category = Damage)
     float Health = 100.0f;
+    
+    UPROPERTY(EditDefaultsOnly)
+    class UAnimMontage* DeathAnim;
+    
 private:
+    
+    void Finish();
+    
     class AWeapon* MyWeapon;
 };
 
