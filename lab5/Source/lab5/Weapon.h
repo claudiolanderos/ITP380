@@ -65,4 +65,7 @@ protected:
     class UParticleSystemComponent* ImpactSC;
     
     FTimerHandle WeaponTimer;
+    
+    UPROPERTY(EditAnywhere, Category = Damage)
+    float Damage = 2.0f;
 };

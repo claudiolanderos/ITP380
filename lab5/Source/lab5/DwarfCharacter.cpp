@@ -43,3 +43,28 @@ void ADwarfCharacter::StopAttack()
 {
     StopAnimMontage(AttackAnim);
 }
+
+float ADwarfCharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+    float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+    if (ActualDamage > 0.0f)
+    {
+        Health -= ActualDamage;
+        if (Health <= 0.0f)
+        { // We're dead, don't allow further damage
+            bCanBeDamaged = false;
+            StopAttack();
+            float time = PlayAnimMontage(DeathAnim);
+            time -= 0.25f;
+            FTimerHandle handle;
+            GetWorldTimerManager().SetTimer(handle, this, &ADwarfCharacter::Finish, time, false);
+            GetController()->UnPossess();
+        }
+    }
+    return ActualDamage;
+}
+
+void ADwarfCharacter::Finish()
+{
+    Destroy();
+}

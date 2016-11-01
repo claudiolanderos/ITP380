@@ -20,7 +20,12 @@ void ADwarfAIController::Tick(float DeltaSeconds)
     }
     else if(mState == Attack)
     {
-        if(mRange < FVector::Dist(mPlayer->GetActorLocation(), GetPawn()->GetActorLocation()))
+        APawn* dwarf = GetPawn();
+        if(mPlayer == nullptr || dwarf == nullptr)
+        {
+            return;
+        }
+        if(mRange < FVector::Dist(mPlayer->GetActorLocation(), dwarf->GetActorLocation()))
         {
             ChasePlayer();
         }

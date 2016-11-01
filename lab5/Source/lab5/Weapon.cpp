@@ -5,6 +5,7 @@
 #include "Sound/SoundCue.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "lab5Character.h"
+#include "DwarfCharacter.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -86,5 +87,11 @@ void AWeapon::WeaponTrace()
     if (Hit.bBlockingHit)
     {
         ImpactSC = UGameplayStatics::SpawnEmitterAtLocation(this, ImpactFX, Hit.ImpactPoint);
+        
+        ADwarfCharacter* Dwarf = Cast<ADwarfCharacter>(Hit.GetActor());
+        if (Dwarf)
+        {
+            Dwarf->TakeDamage(Damage, FDamageEvent(), GetInstigatorController(), this);
+        }
     }
 }

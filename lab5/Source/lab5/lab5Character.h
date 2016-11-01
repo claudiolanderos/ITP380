@@ -34,6 +34,8 @@ protected:
     UPROPERTY(EditAnywhere, Category = Weapon)
     TSubclassOf<class AWeapon> WeaponClass;
     
+    UPROPERTY(EditAnywhere, Category = Damage)
+    float Health = 100.0f;
 private:
     class AWeapon* MyWeapon;
 };
